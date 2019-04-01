@@ -46,11 +46,8 @@ while ($data = $req->fetch()) {
                 $background->integrate();
                 echo ">";
                 echo  "<a class=\"fas fa-cogs fa-3x\" href=\"/admin\"></a>";
-                $navbar = new Navbar;
-                $navbar->integrate();
-                echo "<h1 class=\"text-center\">" . $data['name'] . "</h1>";
-                $layoutFooter = new LayoutFooter;
-                $layoutFooter->integrate();
+                $page = new Page;
+                $page->integrate();
                 echo "</body></html>";
                 break;
     }

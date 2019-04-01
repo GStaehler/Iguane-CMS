@@ -3,11 +3,11 @@
 class LayoutAside
 {
     
-    public function integrate()
+    public function integrate($page)
     {
         echo "<div id=\"layoutAside\" class=\"col-4 container\">";
         $text = new Text;
-        $text->integrate(2);
+        $text->integrate(2, $page);
         echo "</div>";
     }
     

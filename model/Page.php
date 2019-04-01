@@ -11,12 +11,12 @@ class Page
         echo "</div>";
         echo "<main class=\"row\">";
         $layoutMain = new LayoutMain;
-        $layoutMain->integrate();
+        $layoutMain->integrate(0);
         $layoutAside = new LayoutAside;
-        $layoutAside->integrate();
+        $layoutAside->integrate(0);
         echo "</main>";
         $layoutFooter = new LayoutFooter;
-        $layoutFooter->integrate();
+        $layoutFooter->integrate(0);
     }
     
 }
