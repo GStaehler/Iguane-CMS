@@ -64,11 +64,3 @@ a:hover {
 p {
     font-size: 18px;
 }
-
-#layoutAside .layout1 {
-    display: none;
-}
-
-#layoutMain .layout2 {
-    display: none;
-}
