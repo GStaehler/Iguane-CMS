@@ -7,7 +7,7 @@ class LayoutAside
     {
         echo "<div id=\"layoutAside\" class=\"col-4 container\">";
         $text = new Text;
-        $text->integrate();
+        $text->integrate(2);
         echo "</div>";
     }
     
