@@ -55,7 +55,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                     <option value="6">Background Image</option>
                     <option value="7">Image</option>
                 </select>
-                <small class="form-text text-muted">Navbar, Title, Footer and Background Image are unique and can not be created more than once. When creating a page, the Title element of the new page is generated from its name. Navbar Footer and Background Image are the same on every page.</small>
+                <small class="form-text text-muted">Navbar, Title, Footer and Background Image are unique and can not be created more than once. When creating a page, the Title element of the new page is generated from its name. Navbar, Footer and Background Image are the same on every page.</small>
             </div>
             <div class="form-group">
                 <label for="LayoutSelection">Select a layout</label>

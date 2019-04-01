@@ -48,19 +48,19 @@ a:hover {
 }
 
 #layoutMain {
-    background-image: url('https://fakeimg.pl/160x100/?retina=1&text=Main&font=noto');
+    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Main&font=noto');
     border-right: 2px solid lightgrey;
     padding: 20px;
 }
 
 #layoutAside {
-    background-image: url('https://fakeimg.pl/160x100/?retina=1&text=Aside&font=noto');
+    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Aside&font=noto');
     border-left: 2px solid lightgrey;
     padding: 20px;
 }
 
 #layoutHeader {
-    background-image: url('https://fakeimg.pl/160x100/?retina=1&text=Header&font=noto');
+    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Header&font=noto');
 }
 
 p {
@@ -69,7 +69,7 @@ p {
 
 .imageElement {
     width: 60%;
-    height: 320px;
+    height: 280px;
     display: block;
     margin-left: auto;
     margin-right: auto;
