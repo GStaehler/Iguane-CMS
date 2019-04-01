@@ -5,7 +5,7 @@ class Title extends Element
 
     private $isMultiple = true;
 
-    public function integrate()
+    public function integrate(): void
     {
         global $bdd;
         parent::getDatabase();

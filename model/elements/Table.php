@@ -5,7 +5,7 @@ class Table extends Element
 
     private $isMultiple = true;
 
-    public function integrate()
+    public function integrate(): void
     {
         $element = $this->getElement();
         while ($data = $element->fetch()) {

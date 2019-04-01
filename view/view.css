@@ -21,6 +21,7 @@ h1 {
     padding-bottom: 40px;
     margin-top: 40px;
     font-size: 56px;
+    margin-bottom: 0;
 }
 
 .fa-3x {
@@ -35,7 +36,6 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
 
 a:hover {
     color: #00A0C6;
@@ -68,6 +68,7 @@ a:hover {
 
 #layoutHeader {
     background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Header&font=noto');
+    border-bottom: 8px solid lightgrey;
 }
 
 p {

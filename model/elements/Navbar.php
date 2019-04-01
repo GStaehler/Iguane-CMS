@@ -5,7 +5,7 @@ class Navbar extends Element
 
     private $isMultiple = false;
 
-    public function integrate()
+    public function integrate(): void
     {
         global $bdd;
         parent::getDatabase();

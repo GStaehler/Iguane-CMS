@@ -3,7 +3,7 @@
 class NewPage
 {
     
-    public function integrate($page)
+    public function integrate($page): void
     {
         echo "<main class=\"row\">";
         $layoutMain = new LayoutMain;
