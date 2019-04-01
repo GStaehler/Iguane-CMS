@@ -5,18 +5,12 @@ class Navbar extends Element
 
     private $isMultiple = false;
 
-    public function getElement()
+    public function integrate()
     {
         global $bdd;
         parent::getDatabase();
         $req = $bdd->query('SELECT element.content FROM element INNER JOIN type ON element.type = type.id WHERE element.type = 2');
-        return $req;
-    }
-
-    public function integrate()
-    {
-        $element = $this->getElement();
-        while ($data = $element->fetch()) {
+        while ($data = $req->fetch()) {
             echo "<header><nav class=\"navbar navbar-dark bg-dark\">
                 <a class=\"navbar-brand\" href=\"/\">" . $data['content'] . "</a>
                 <ul class=\"navbar-nav d-flex flex-row justify-content-start\" style=\"position: absolute; left: 132px;\">";
