@@ -32,7 +32,7 @@ while ($data = $req->fetch()) {
                 require('model/layouts/LayoutAside.php');
                 require('model/layouts/LayoutHeader.php');
                 require('model/layouts/LayoutFooter.php');
-                require('model/Page.php');
+                require('model/NewPage.php');
                 echo "<title>" . $data['content'] . " - " . $data['name'] . "</title>";
                 echo "<style>";
                 require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css");
@@ -46,8 +46,15 @@ while ($data = $req->fetch()) {
                 $background->integrate();
                 echo ">";
                 echo  "<a class=\"fas fa-cogs fa-3x\" href=\"/admin\"></a>";
-                $page = new Page;
+                echo "<div id=\"layoutHeader\">";
+                $navbar = new Navbar;
+                $navbar->integrate();
+                echo "<h1 class=\"text-center\">" . $data['name'] . "</h1>";
+                echo "</div>";
+                $page = new NewPage;
                 $page->integrate($data['id']);
+                $layoutFooter = new LayoutFooter;
+                $layoutFooter->integrate();
                 echo "</body></html>";
                 break;
     }
