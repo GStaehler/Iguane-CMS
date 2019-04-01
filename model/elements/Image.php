@@ -5,7 +5,7 @@ class Image extends Element
 
     private $isMultiple = true;
 
-    /* public function integrate($layout, $page)
+    public function integrate($layout, $page)
     {
         global $bdd;
         parent::getDatabase();
@@ -13,5 +13,5 @@ class Image extends Element
         while ($data = $req->fetch()) {
             echo "<img class=\"imageElement\" src=\"" . $data['content'] . "\">";
         }
-    } */
+    }
 }
