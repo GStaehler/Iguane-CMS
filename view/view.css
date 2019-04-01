@@ -18,9 +18,9 @@ footer {
 }
 
 h1 {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     margin-top: 40px;
-    font-size: 52px;
+    font-size: 56px;
 }
 
 .fa-3x {
@@ -48,21 +48,23 @@ a:hover {
 }
 
 #layoutMain {
-    background-image: url('https://fakeimg.pl/100x40/?retina=1&text=Main&font=noto');
+    background-image: url('https://fakeimg.pl/160x100/?retina=1&text=Main&font=noto');
     border-right: 2px solid lightgrey;
+    padding: 20px;
 }
 
 #layoutAside {
-    background-image: url('https://fakeimg.pl/100x40/?retina=1&text=Aside&font=noto');
+    background-image: url('https://fakeimg.pl/160x100/?retina=1&text=Aside&font=noto');
     border-left: 2px solid lightgrey;
+    padding: 20px;
 }
 
 #layoutHeader {
-    background-image: url('https://fakeimg.pl/100x40/?retina=1&text=Header&font=noto');
+    background-image: url('https://fakeimg.pl/160x100/?retina=1&text=Header&font=noto');
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .imageElement {
@@ -74,4 +76,6 @@ p {
     margin-top: 40px;
     margin-bottom: 40px;
     object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
 }
