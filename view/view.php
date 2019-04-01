@@ -31,7 +31,7 @@ require('model/Page.php');
     <a class="fas fa-cogs fa-3x" href="/admin"></a>
     <?php
     $page = new Page;
-    $page->integrate();
+    $page->integrate(0);
     ?>
 </body>
 
