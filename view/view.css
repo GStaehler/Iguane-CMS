@@ -50,20 +50,20 @@ a:hover {
 #layoutMain {
     background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Main&font=noto');
     border-right: 4px solid lightgrey;
-    padding: 20px;
+    padding: 28px;
 }
 
 #layoutAside {
     background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Aside&font=noto');
     border-left: 4px solid lightgrey;
-    padding: 20px;
+    padding: 28px;
 }
 
 #layoutBottom {
     background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Bottom&font=noto');
     border-top: 8px solid lightgrey;
-    padding: 20px;
-    margin-bottom: 40px;
+    padding: 28px;
+    margin-bottom: 56px;
 }
 
 #layoutHeader {
