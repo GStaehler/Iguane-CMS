@@ -1,0 +1,74 @@
+main {
+    margin-top: 40px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #343a40;
+}
+
+.text-muted {
+    margin-top: 16px;
+    color: white !important;
+    font-size: 15px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 52px;
+}
+
+.fa-3x {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+    color: green;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: #00A0C6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.row {
+    margin: 0;
+}
+
+#layoutMain {
+    background-image: url('https://fakeimg.pl/100x40/?retina=1&text=Main&font=noto');
+    border-right: 2px solid lightgrey;
+}
+
+#layoutAside {
+    background-image: url('https://fakeimg.pl/100x40/?retina=1&text=Aside&font=noto');
+    border-left: 2px solid lightgrey;
+}
+
+#layoutHeader {
+    background-image: url('https://fakeimg.pl/100x40/?retina=1&text=Header&font=noto');
+}
+
+p {
+    font-size: 18px;
+}
+
+#layoutAside .layout1 {
+    display: none;
+}
+
+#layoutMain .layout2 {
+    display: none;
+}
