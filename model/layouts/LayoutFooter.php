@@ -6,7 +6,7 @@ class LayoutFooter
     public function integrate()
     {
         $footer = new Footer;
-        $footer->integrate(3);
+        $footer->integrate();
     }
     
 }

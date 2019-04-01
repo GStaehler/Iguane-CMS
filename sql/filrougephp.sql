@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 01 avr. 2019 à 13:45
+-- Généré le :  lun. 01 avr. 2019 à 14:55
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -41,18 +41,20 @@ CREATE TABLE `element` (
 --
 
 INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
-(71, 4, 3, 'Gauthier Staehler', 0),
+(71, 4, 1, 'Gauthier Staehler', 0),
 (77, 5, 1, 'Ceci est une zone de texte !', 0),
-(80, 6, 3, 'http://www.taklom360.com/images/placeholders/1920x1200-1.jpg', 0),
+(80, 6, 1, 'http://www.taklom360.com/images/placeholders/1920x1200-1.jpg', 0),
 (81, 3, 1, 'Title', 0),
 (82, 5, 1, 'Praesent quis diam molestie nunc vehicula condimentum vel id augue. Nunc dapibus vestibulum mauris, placerat ullamcorper odio dictum in. Phasellus quis diam nec felis ultrices mattis id id quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam porttitor, lorem ac mattis consequat, magna ex auctor libero, sit amet sodales ante ipsum ut eros. Nulla aliquet, odio id dictum gravida, enim risus vulputate erat, a ultricies est dolor a orci. Quisque tempus quam eget nulla pellentesque ornare. Vivamus a viverra est. Donec sit amet est non nulla sollicitudin dignissim eu accumsan dolor. Fusce nunc augue, ullamcorper sed augue at, rhoncus congue sem. Proin aliquet faucibus nisl nec vestibulum. Suspendisse aliquet sem eu congue pellentesque. ', 0),
-(83, 5, 2, 'Zone de texte dans le layout aside !', 0),
+(83, 5, 2, 'Zone de texte dans le layout Aside !', 0),
 (96, 2, 1, 'Fil Rouge', 0),
 (101, 5, 1, 'Hey (brrrr)\r\nOuh, on va t\'shooter dans la galerie\r\nChoppa vidé dans la galerie\r\nNah, nah, nah wasn\'t me\r\nNah, nah, nah wasn\'t me (no)\r\nGucci, Fendi dans ma galerie\r\nPolice m\'appelle, j\'réponds pas, je nie\r\nNah, nah, nah wasn\'t me\r\nNah, nah, nah wasn\'t me', 3),
-(103, 5, 2, 'Test', 10),
 (109, 7, 1, 'http://emi.ecpad.fr/wp-content/themes/invictus_3.3.1/images/dummy-image.jpg', 0),
 (110, 7, 2, 'https://www.raprnb.com/wp-content/uploads/2019/02/Hamza-Paradise.png', 3),
-(111, 5, 2, 'Nouveaux ennemis, nouvelles armes\r\nT\'aimes pas la paix c\'est qu\'t\'as pas fait la guerre guerre guerre\r\nL\'oseille et la mif, éclairent mon âme\r\nJ\'refais la peinture du frigo en bleu jaune vert\r\nOn veut notre coin d\'herbe on veut la planète Terre\r\nOn veut le monde Chico\r\nT\'inquiète, on rendra tout ce qu\'on acquiert\r\nOn veut le monde Chico', 0);
+(111, 5, 2, 'Nouveaux ennemis, nouvelles armes\r\nT\'aimes pas la paix c\'est qu\'t\'as pas fait la guerre guerre guerre\r\nL\'oseille et la mif, éclairent mon âme\r\nJ\'refais la peinture du frigo en bleu jaune vert\r\nOn veut notre coin d\'herbe on veut la planète Terre\r\nOn veut le monde Chico\r\nT\'inquiète, on rendra tout ce qu\'on acquiert\r\nOn veut le monde Chico', 0),
+(112, 5, 3, 'Quisque tempus quam eget nulla pellentesque ornare. Vivamus a viverra est. Donec sit amet est non nulla sollicitudin dignissim eu accumsan dolor.', 0),
+(113, 5, 3, 'Zone de texte dans le layout Bottom !', 0),
+(115, 7, 3, 'https://www.wikihow.com/images/6/6d/Plant-a-Cut-Flower-Garden-Step-8.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -72,7 +74,7 @@ CREATE TABLE `layout` (
 INSERT INTO `layout` (`id`, `name`) VALUES
 (1, 'main'),
 (2, 'aside'),
-(3, 'other');
+(3, 'bottom');
 
 -- --------------------------------------------------------
 
@@ -156,7 +158,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
@@ -168,7 +170,7 @@ ALTER TABLE `layout`
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `type`

@@ -62,6 +62,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                 <select class="form-control" id="LayoutSelection" name="layout">
                     <option value="1">Main</option>
                     <option value="2">Aside</option>
+                    <option value="3">Bottom</option>
                 </select>
             </div>
             <?php $req = $bdd->query('SELECT page.name, page.id FROM page ORDER BY page.id'); ?>

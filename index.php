@@ -31,6 +31,7 @@ while ($data = $req->fetch()) {
                 require('model/elements/Background.php');
                 require('model/layouts/LayoutMain.php');
                 require('model/layouts/LayoutAside.php');
+                require('model/layouts/LayoutBottom.php');
                 require('model/layouts/LayoutHeader.php');
                 require('model/layouts/LayoutFooter.php');
                 require('model/NewPage.php');

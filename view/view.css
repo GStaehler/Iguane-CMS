@@ -49,14 +49,21 @@ a:hover {
 
 #layoutMain {
     background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Main&font=noto');
-    border-right: 2px solid lightgrey;
+    border-right: 4px solid lightgrey;
     padding: 20px;
 }
 
 #layoutAside {
     background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Aside&font=noto');
-    border-left: 2px solid lightgrey;
+    border-left: 4px solid lightgrey;
     padding: 20px;
+}
+
+#layoutBottom {
+    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Bottom&font=noto');
+    border-top: 8px solid lightgrey;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
 #layoutHeader {
