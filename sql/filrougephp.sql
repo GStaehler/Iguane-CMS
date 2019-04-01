@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 29 mars 2019 à 12:25
+-- Généré le :  lun. 01 avr. 2019 à 11:26
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -51,7 +51,9 @@ INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
 (85, 5, 1, 'Un dans main', 0),
 (86, 5, 2, 'Je fais un texte dans le layout aside', 0),
 (87, 5, 1, 'Et un texte dans le layout main', 0),
-(96, 2, 1, 'Fil Rouge', 0);
+(96, 2, 1, 'Fil Rouge', 0),
+(101, 5, 1, 'Test', 3),
+(103, 5, 2, 'Test', 10);
 
 -- --------------------------------------------------------
 
@@ -154,7 +156,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
@@ -166,7 +168,7 @@ ALTER TABLE `layout`
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pour la table `type`
