@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 01 avr. 2019 à 15:49
+-- Généré le :  mar. 02 avr. 2019 à 09:42
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -55,7 +55,9 @@ INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
 (112, 5, 3, 'Quisque tempus quam eget nulla pellentesque ornare. Vivamus a viverra est. Donec sit amet est non nulla sollicitudin dignissim eu accumsan dolor.', 0),
 (113, 5, 3, 'Zone de texte dans le layout Bottom !', 0),
 (115, 7, 3, 'https://www.wikihow.com/images/6/6d/Plant-a-Cut-Flower-Garden-Step-8.jpg', 3),
-(116, 7, 2, 'http://emi.ecpad.fr/wp-content/themes/invictus_3.3.1/images/dummy-image.jpg', 0);
+(116, 7, 2, 'http://emi.ecpad.fr/wp-content/themes/invictus_3.3.1/images/dummy-image.jpg', 0),
+(117, 8, 2, 'https://www.youtube.com/watch?v=yTzyJ7kDLL4', 10),
+(118, 8, 1, 'https://www.youtube.com/watch?v=YfUaiWpXKzU', 3);
 
 -- --------------------------------------------------------
 
@@ -118,7 +120,8 @@ INSERT INTO `type` (`id`, `name`) VALUES
 (4, 'footer'),
 (5, 'textzone'),
 (6, 'background'),
-(7, 'image');
+(7, 'image'),
+(8, 'video');
 
 --
 -- Index pour les tables déchargées
@@ -159,7 +162,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
@@ -171,13 +174,13 @@ ALTER TABLE `layout`
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `type`
 --
 ALTER TABLE `type`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

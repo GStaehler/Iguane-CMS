@@ -48,26 +48,26 @@ a:hover {
 }
 
 #layoutMain {
-    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Main&font=noto');
+    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Main&font=noto'); */
     border-right: 4px solid lightgrey;
     padding: 28px;
 }
 
 #layoutAside {
-    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Aside&font=noto');
+    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Aside&font=noto'); */
     border-left: 4px solid lightgrey;
     padding: 28px;
 }
 
 #layoutBottom {
-    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Bottom&font=noto');
+    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Bottom&font=noto'); */
     border-top: 8px solid lightgrey;
     padding: 28px;
     margin-bottom: 56px;
 }
 
 #layoutHeader {
-    background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Header&font=noto');
+    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Header&font=noto'); */
     border-bottom: 8px solid lightgrey;
 }
 
@@ -84,6 +84,18 @@ p {
     margin-top: 40px;
     margin-bottom: 40px;
     object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+
+.youtubeVideo {
+    width: 60%;
+    height: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 4px;
 }

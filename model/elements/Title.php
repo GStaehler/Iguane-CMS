@@ -3,7 +3,7 @@
 class Title extends Element
 {
 
-    private $isMultiple = true;
+    private $isMultiple = false;
 
     public function integrate(): void
     {

@@ -10,6 +10,8 @@ class LayoutBottom
         $img->integrate(3, $page);
         $text = new Text;
         $text->integrate(3, $page);
+        $vid = new Video;
+        $vid->integrate(3, $page);
         echo "</div>";
     }
     

@@ -10,6 +10,8 @@ class LayoutMain
         $img->integrate(1, $page);
         $text = new Text;
         $text->integrate(1, $page);
+        $vid = new Video;
+        $vid->integrate(1, $page);
         echo "</div>";
     }
     

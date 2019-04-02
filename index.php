@@ -23,6 +23,7 @@ while ($data = $req->fetch()) {
             case '/'.str_replace(' ', '', $data['name']):
                 require('model/elements/Element.php');
                 require('model/elements/Image.php');
+                require('model/elements/Video.php');
                 require('model/elements/Table.php');
                 require('model/elements/Navbar.php');
                 require('model/elements/Title.php');
