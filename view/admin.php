@@ -109,6 +109,15 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deletePage" value="Delete Page">
+            <hr class="m-4">
+            <h2>Theme :</h2><br>
+            <div class="form-group">
+                <label for="ThemeSelection">Select a layout</label>
+                <select class="form-control" id="ThemeSelection" name="theme">
+                    <option value="1">Default: Light (For light color background)</option>
+                    <option value="2">Dark (For dark color background)</option>
+                </select>
+            </div>
             <br class="mb-5">
         </form>
         <br>
