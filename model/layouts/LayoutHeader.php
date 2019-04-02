@@ -3,7 +3,7 @@
 class LayoutHeader
 {
     
-    public function integrate(): void
+    public function integrate()//: void
     {
         $navbar = new Navbar;
         $navbar->integrate();

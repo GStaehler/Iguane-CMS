@@ -3,7 +3,7 @@
 class LayoutMain
 {
     
-    public function integrate($page): void
+    public function integrate($page)//: void
     {
         echo "<div id=\"layoutMain\" class=\"col-8 container\">";
         $img = new Image;

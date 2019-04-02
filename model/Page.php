@@ -3,7 +3,7 @@
 class Page
 {
     
-    public function integrate($page): void
+    public function integrate($page)//: void
     {
         echo "<div id=\"layoutHeader\">";
         $layoutHeader = new LayoutHeader;
