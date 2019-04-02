@@ -1,7 +1,7 @@
 <?php
 
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '');
-$req = $bdd->query('SELECT page.id, page.name, element.content as content FROM page, element WHERE element.type = 2');
+$req = $bdd->query('SELECT page.id, page.name, element.content as content, site.theme as theme FROM site, page, element WHERE element.type = 2');
 
 $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
@@ -39,7 +39,12 @@ while ($data = $req->fetch()) {
                 echo "<div id=\"layoutHeader\">";
                 $navbar = new Navbar;
                 $navbar->integrate();
-                echo "<h1 class=\"text-center\">" . $data['name'] . "</h1>";
+                if ($data['theme'] == 2) {
+                    echo "<h1 class=\"text-center darkTheme\">" . $data['name'] . "</h1>";
+                }
+                else {
+                    echo "<h1 class=\"text-center\">" . $data['name'] . "</h1>";
+                }
                 echo "</div>";
                 $page = new NewPage;
                 $page->integrate($data['id']);
@@ -54,7 +59,7 @@ while ($data = $req->fetch()) {
                 require_once 'view/admin.php';
                 break;
             default:
-                header('HTTP/1.0 404 Not Found');
+                // header('HTTP/1.0 404 Not Found');
                 // require 'view/404.php';
                 break;
     }

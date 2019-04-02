@@ -20,6 +20,11 @@ if (isset($_POST['deletePage'])) {
     header("Location: /");
 }
 
+if (isset($_POST['changeTheme'])) {
+    $req = $bdd->query('UPDATE site SET theme = ' . $_POST["theme"] . ' WHERE site.id = 1');
+    header("Location: /");
+}
+
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '');
 
 ?>
@@ -112,12 +117,17 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <hr class="m-4">
             <h2>Theme :</h2><br>
             <div class="form-group">
-                <label for="ThemeSelection">Select a layout</label>
+                <?php
+                $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
+                while ($data = $req->fetch()) { echo "<p><small>Current Theme : " . $data['theme_name'] . "</small></p>"; };
+                ?>
+                <label for="ThemeSelection">Select a Theme</label>
                 <select class="form-control" id="ThemeSelection" name="theme">
-                    <option value="1">Default: Light (For light color background)</option>
+                    <option value="1">Light (For light color background)</option>
                     <option value="2">Dark (For dark color background)</option>
                 </select>
             </div>
+            <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
             <br class="mb-5">
         </form>
         <br>
