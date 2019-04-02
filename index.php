@@ -5,19 +5,6 @@ $req = $bdd->query('SELECT page.id, page.name, element.content as content FROM p
 
 $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
-switch ($request_uri[0]) {
-    case '/':
-        require 'view/view.php';
-        break;
-    case '/admin':
-        require 'view/admin.php';
-        break;
-    /* default:
-        header('HTTP/1.0 404 Not Found');
-        require 'view/404.php';
-        break; */
-}
-
 while ($data = $req->fetch()) {
     switch ($request_uri[0]) {
             case '/'.str_replace(' ', '', $data['name']):
@@ -59,6 +46,16 @@ while ($data = $req->fetch()) {
                 $layoutFooter = new LayoutFooter;
                 $layoutFooter->integrate();
                 echo "</body></html>";
+                break;
+            case '/':
+                require_once 'view/view.php';
+                break;
+            case '/admin':
+                require_once 'view/admin.php';
+                break;
+            default:
+                header('HTTP/1.0 404 Not Found');
+                // require 'view/404.php';
                 break;
     }
 }
