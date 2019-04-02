@@ -1,4 +1,4 @@
-<!doctype HTML>
+<!doctype HTML> <!-- DEPRECATED -->
 <html lang="en">
 
 <head>

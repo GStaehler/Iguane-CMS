@@ -27,7 +27,7 @@ require('model/Page.php');
     <title><?php while ($data = $req->fetch()) { echo $data['content'] . " - "; } ?>Home</title>
     <style><?php require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css"); ?></style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <style><?php require_once("view.css"); ?></style>
+    <style><?php require_once("style/view.css"); ?></style>
 </head>
 
 <body <?php $background = new Background; $background->integrate(); ?> >

@@ -28,7 +28,7 @@ while ($data = $req->fetch()) {
                 require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css");
                 echo "</style>";
                 echo "<style>";
-                require_once("view/view.css");
+                require_once("style/view.css");
                 echo "</style>";
                 echo "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\">";
                 echo "<body";
