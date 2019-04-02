@@ -25,6 +25,19 @@ if (isset($_POST['changeTheme'])) {
     header("Location: /");
 }
 
+if (isset($_POST['showGrid'])) {
+    $req2 = $bdd->query('SELECT grid FROM site');
+    while ($data = $req2->fetch()) {
+        if ($data['grid'] == 0) {
+            $req = $bdd->query('UPDATE site SET grid = 1 WHERE site.id = 1');
+        }
+        else if ($data['grid'] == 1) {
+            $req = $bdd->query('UPDATE site SET grid = 0 WHERE site.id = 1');
+        }
+    }
+    header("Location: /");
+}
+
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '');
 
 ?>
@@ -128,6 +141,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                 </select>
             </div>
             <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
+            <!-- <hr class="m-4"> DEPRECATED
+            <h2>Grid :</h2><br>
+            <input type="submit" class="btn btn-info" name="showGrid" value="Show/Remove Grid"> -->
             <br class="mb-5">
         </form>
         <br>

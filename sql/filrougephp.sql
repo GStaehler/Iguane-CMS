@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mar. 02 avr. 2019 à 14:42
+-- Généré le :  mar. 02 avr. 2019 à 17:13
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -106,15 +106,16 @@ INSERT INTO `page` (`id`, `name`) VALUES
 
 CREATE TABLE `site` (
   `id` tinyint(4) NOT NULL,
-  `theme` tinyint(4) NOT NULL
+  `theme` tinyint(4) NOT NULL,
+  `grid` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `site`
 --
 
-INSERT INTO `site` (`id`, `theme`) VALUES
-(1, 1);
+INSERT INTO `site` (`id`, `theme`, `grid`) VALUES
+(1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -212,7 +213,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
@@ -224,7 +225,7 @@ ALTER TABLE `layout`
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `site`
