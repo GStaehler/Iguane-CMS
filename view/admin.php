@@ -87,12 +87,12 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <input type="submit" class="btn btn-success" name="addElement" value="Add Element">
             <hr class="m-4">
             <?php
-            $req = $bdd->query('SELECT element.id, element.type, element.layout, element.content, type.name as type_name, layout.name as layout_name FROM element INNER JOIN type ON element.type = type.id INNER JOIN layout ON element.layout = layout.id ORDER BY element.id');
+            $req = $bdd->query('SELECT element.id, element.type, element.layout, SUBSTRING(element.content, 1, 120) AS content, element.page, type.name as type_name, layout.name as layout_name FROM element INNER JOIN type ON element.type = type.id INNER JOIN layout ON element.layout = layout.id ORDER BY element.id');
             ?>
             <div class="form-group">
                 <label for="DeleteElement">Delete an element</label>
                 <select class="form-control" id="DeleteElement" name="delete">
-                    <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['type_name'] . " | " . $data['layout_name'] . " -> \"" . $data['content'] . " \"</option>"; } ?>
+                    <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['type_name'] . " : " . $data['page'] . " | " . $data['layout_name'] . " -> \"" . $data['content'] . " \"</option>"; } ?>
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element">
