@@ -54,12 +54,13 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
     <link rel="stylesheet" href="style/admin.css">
     <link rel="stylesheet" href="vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
 </head>
 
 <body>
     <a class="fas fa-eye fa-3x" href="/"></a>
-    <div id="administration" class="container">
-        <h1><span style="text-decoration: overline">Iguane</span> CMS - Administration</h1>
+    <div id="administration" class="container"><br>
+        <h1><span style="text-decoration: overline; font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span> - Administration</h1><br>
         <small class="form-text text-muted" style="position: relative; left: 8px;">Gauthier Staehler</small>
         <hr>
         <br>
@@ -97,7 +98,6 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <div class="form-group">
                 <label for="ContentArea">Content</label>
                 <textarea class="form-control" id="ContentArea" rows="3" name="content" value=""></textarea>
-                <!-- <small class="form-text text-muted">For multiple content, separate them with ";"</small> -->
             </div>
             <input type="submit" class="btn btn-success" name="addElement" value="Add Element">
             <hr class="m-4">
@@ -134,9 +134,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <div class="form-group">
                 <?php
                 $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
-                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 8px; bottom: 1.5px;\">Current Theme : " . $data['theme_name'] . "</small><br><br>"; };
+                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 6px; bottom: 1.5px;\">Current Theme : </small><code style=\"position: relative; left: 6px;\">" . $data['theme_name'] . "</code><br><br>"; };
                 ?>
-                <label for="ThemeSelection">Select a Theme</label>
+                <label for="ThemeSelection">Select a theme</label>
                 <select class="form-control" id="ThemeSelection" name="theme">
                     <option value="1">Light (For light color background)</option>
                     <option value="2">Dark (For dark color background)</option>
