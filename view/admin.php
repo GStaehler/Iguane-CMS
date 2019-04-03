@@ -60,6 +60,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
     <a class="fas fa-eye fa-3x" href="/"></a>
     <div id="administration" class="container">
         <h1><span style="text-decoration: overline">Iguane</span> CMS - Administration</h1>
+        <small class="form-text text-muted" style="position: relative; left: 8px;">Gauthier Staehler</small>
         <hr>
         <br>
         <h2>Elements :</h2><br>
@@ -129,11 +130,11 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             </div>
             <input type="submit" class="btn btn-danger" name="deletePage" value="Delete Page">
             <hr class="m-4">
-            <h2>Theme :</h2><br>
+            <h2>Theme :</h2>
             <div class="form-group">
                 <?php
                 $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
-                while ($data = $req->fetch()) { echo "<p><small>Current Theme : " . $data['theme_name'] . "</small></p>"; };
+                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 12px; bottom: 1.5px;\">Current Theme : " . $data['theme_name'] . "</small><br><br>"; };
                 ?>
                 <label for="ThemeSelection">Select a Theme</label>
                 <select class="form-control" id="ThemeSelection" name="theme">
@@ -143,8 +144,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             </div>
             <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
             <hr class="m-4">
-            <h2>Grid :</h2><br>
-            <input type="submit" class="btn btn-info" name="showGrid" value="Show/Remove Grid">
+            <h2>Grid :</h2>
+            <small class="form-text text-muted">Grid is a border around Layouts for better visibilty.</small><br>
+            <input type="submit" class="btn btn-warning" name="showGrid" value="Show/Remove Grid">
             <br class="mb-5">
         </form>
         <br>
