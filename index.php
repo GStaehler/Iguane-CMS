@@ -24,6 +24,7 @@ while ($data = $req->fetch()) {
                 require('model/layouts/LayoutFooter.php');
                 require('model/NewPage.php');
                 echo "<title>" . $data['content'] . " - " . $data['name'] . "</title>";
+                echo "<link rel=\"icon\" href=\"https://image.flaticon.com/icons/png/512/83/83946.png\">";
                 echo "<style>";
                 require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css");
                 echo "</style>";

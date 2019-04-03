@@ -50,6 +50,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
     <meta name="author" content="Gauthier Staehler">
     <?php $req = $bdd->query('SELECT element.content FROM element WHERE element.type = 2'); ?>
     <title><?php while ($data = $req->fetch()) { echo $data['content'] . " - "; } ?>Administration</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/83/83946.png">
     <link rel="stylesheet" href="style/admin.css">
     <link rel="stylesheet" href="vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
