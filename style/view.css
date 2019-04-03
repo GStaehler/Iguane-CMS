@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 main {
     margin-top: 40px;
 }
