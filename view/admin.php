@@ -142,9 +142,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                 </select>
             </div>
             <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
-            <!-- <hr class="m-4"> DEPRECATED
+            <hr class="m-4">
             <h2>Grid :</h2><br>
-            <input type="submit" class="btn btn-info" name="showGrid" value="Show/Remove Grid"> -->
+            <input type="submit" class="btn btn-info" name="showGrid" value="Show/Remove Grid">
             <br class="mb-5">
         </form>
         <br>

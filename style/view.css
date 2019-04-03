@@ -120,3 +120,9 @@ p {
 .darkTheme {
     color: lightgrey;
 }
+
+.grid {
+    border: 8px solid red;
+    border-bottom: 4px solid red;
+    border-left: 4px solid red;
+}

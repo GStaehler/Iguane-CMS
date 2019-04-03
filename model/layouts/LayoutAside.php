@@ -1,11 +1,16 @@
 <?php
 
-class LayoutAside
+class LayoutAside extends Layout
 {
     
     public function integrate($page): void
     {
-        echo "<div id=\"layoutAside\" class=\"col-4 container\">";
+        global $bdd;
+        parent::getDatabase();
+        $req = $bdd->query('SELECT site.grid AS grid FROM site');
+        echo "<div id=\"layoutAside\" class=\"col-4 container";
+        while ($data = $req->fetch()) { if($data['grid' == 1]) { echo " grid"; }}
+        echo "\">";
         $text = new Text;
         $text->integrate(2, $page);
         $img = new Image;

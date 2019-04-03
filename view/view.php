@@ -8,6 +8,7 @@ require('model/elements/Title.php');
 require('model/elements/Footer.php');
 require('model/elements/Text.php');
 require('model/elements/Background.php');
+require('model/layouts/Layout.php');
 require('model/layouts/LayoutMain.php');
 require('model/layouts/LayoutAside.php');
 require('model/layouts/LayoutBottom.php');
