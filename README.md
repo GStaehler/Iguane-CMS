@@ -1,4 +1,4 @@
-# I̅g̅u̅a̅n̅e CMS
+# Iguane CMS
 ### Developed by Gauthier Staehler
 
 ### Installation :
