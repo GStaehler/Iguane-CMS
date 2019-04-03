@@ -59,7 +59,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
 <body>
     <a class="fas fa-eye fa-3x" href="/"></a>
     <div id="administration" class="container">
-        <h1>Administration</h1>
+        <h1><span style="text-decoration: overline">Iguane</span> CMS - Administration</h1>
         <hr>
         <br>
         <h2>Elements :</h2><br>
