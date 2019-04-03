@@ -4,5 +4,9 @@
 ### Installation :
 
 ```sh
-php -S localhost:8000
+- Clone the repository into your local folder
+
+- Import the sql file into phpMyAdmin
+
+- php -S localhost:8000
 ```
