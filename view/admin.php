@@ -134,7 +134,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <div class="form-group">
                 <?php
                 $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
-                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 12px; bottom: 1.5px;\">Current Theme : " . $data['theme_name'] . "</small><br><br>"; };
+                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 8px; bottom: 1.5px;\">Current Theme : " . $data['theme_name'] . "</small><br><br>"; };
                 ?>
                 <label for="ThemeSelection">Select a Theme</label>
                 <select class="form-control" id="ThemeSelection" name="theme">
