@@ -1,4 +1,4 @@
-# Fil Rouge 4.0.2
+# I̅g̅u̅a̅n̅e CMS
 ### Developed by Gauthier Staehler
 
 ### Installation :
