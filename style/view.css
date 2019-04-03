@@ -50,21 +50,23 @@ a:hover {
 #layoutMain {
     /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Main&font=noto'); */
     /* border-right: 4px solid lightgrey; */
-    padding: 28px;
+    padding: 60px;
+    padding-top: 20px;
     padding-bottom: 0;
 }
 
 #layoutAside {
     /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Aside&font=noto'); */
     /* border-left: 4px solid lightgrey; */
-    padding: 28px;
+    padding: 60px;
+    padding-top: 20px;
     padding-bottom: 0;
 }
 
 #layoutBottom {
     /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Bottom&font=noto'); */
     /* border-top: 8px solid lightgrey; */
-    padding: 28px;
+    padding: 60px;
     padding-top: 0;
     margin-bottom: 56px;
 }
@@ -82,7 +84,7 @@ p {
 
 .imageElement {
     width: 60%;
-    height: 280px;
+    height: 292px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -91,6 +93,10 @@ p {
     object-fit: cover;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 4px;
+}
+
+#layoutAside .imageElement {
+    width: 86%;
 }
 
 .youtubeVideo {
@@ -106,5 +112,5 @@ p {
 }
 
 .darkTheme {
-    color: white;
+    color: lightgrey;
 }
