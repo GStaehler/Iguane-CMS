@@ -1,4 +1,7 @@
 # Iguane CMS
+
+Content Management System for publishing web content. Iguane is written in PHP, uses object-oriented-programming techniques and stores data in a MySQL database.
+
 ### Developed by Gauthier Staehler
 
 ### Installation :
