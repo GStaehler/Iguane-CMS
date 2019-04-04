@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mer. 03 avr. 2019 à 12:25
+-- Généré le :  jeu. 04 avr. 2019 à 12:40
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -47,7 +47,6 @@ INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
 (81, 3, 1, 'Title', 0),
 (82, 5, 1, 'Praesent quis diam molestie nunc vehicula condimentum vel id augue. Nunc dapibus vestibulum mauris, placerat ullamcorper odio dictum in. Phasellus quis diam nec felis ultrices mattis id id quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam porttitor, lorem ac mattis consequat, magna ex auctor libero, sit amet sodales ante ipsum ut eros. Nulla aliquet, odio id dictum gravida, enim risus vulputate erat, a ultricies est dolor a orci. Quisque tempus quam eget nulla pellentesque ornare.', 0),
 (83, 5, 2, 'Zone de texte dans le layout Aside !', 0),
-(96, 2, 1, 'Fil Rouge', 0),
 (101, 5, 1, 'Hey (brrrr)\r\nOuh, on va t\'shooter dans la galerie\r\nChoppa vidé dans la galerie\r\nNah, nah, nah wasn\'t me\r\nNah, nah, nah wasn\'t me (no)\r\nGucci, Fendi dans ma galerie\r\nPolice m\'appelle, j\'réponds pas, je nie\r\nNah, nah, nah wasn\'t me\r\nNah, nah, nah wasn\'t me', 3),
 (109, 7, 1, 'http://emi.ecpad.fr/wp-content/themes/invictus_3.3.1/images/dummy-image.jpg', 0),
 (110, 7, 2, 'https://www.raprnb.com/wp-content/uploads/2019/02/Hamza-Paradise.png', 3),
@@ -62,7 +61,8 @@ INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
 (120, 7, 1, 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Libya_4983_Tadrart_Acacus_Luca_Galuzzi_2007.jpg', 11),
 (121, 7, 2, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ecoregion_PA1327.svg/1280px-Ecoregion_PA1327.svg.png', 11),
 (122, 5, 2, 'Les dayas (pluriel dayate ou daia (daiate), dhaia) sont des dépressions fermées d\'extension limitée (quelques mètres à 1 km de diamètre), au fond en général argileux ou argilo-sableux dans lesquelles l\'eau de ruissellement peut s\'accumuler. Une alternance d\'inondation et d\'exondation associée à une érosion éolienne participe à leur formation : parfois d\'origine karstique (dolines) sur certains plateaux par exemple, issues de la déflation éolienne ou mixtes. Elles constituent des zones de végétation pérennes.', 11),
-(123, 8, 1, 'https://www.youtube.com/watch?v=54RS8kAHybg', 11);
+(123, 8, 1, 'https://www.youtube.com/watch?v=54RS8kAHybg', 11),
+(125, 2, 1, 'Fil Rouge', 0);
 
 -- --------------------------------------------------------
 
@@ -219,7 +219,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
