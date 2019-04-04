@@ -59,11 +59,10 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
 
 <body>
     <a class="fas fa-eye fa-3x" href="/"></a>
-    <div id="administration" class="container"><br>
-        <h1><span style="text-decoration: overline; font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span> - Administration</h1><br>
-        <small class="form-text text-muted" style="position: relative; left: 8px;">Gauthier Staehler</small>
-        <hr>
-        <br>
+    <div id="administration" class="container"><br><br>
+        <small class="form-text text-muted">Gauthier Staehler</small>
+        <h1><span style="text-decoration: overline; font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span> - Administration</h1>
+        <hr class="m-4"><br>
         <h2>Elements :</h2><br>
         <form action="" method="post">
             <div class="form-group">
@@ -111,7 +110,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element">
-            <hr class="m-4">
+            <hr class="m-4"><br>
             <h2>Pages :</h2><br>
             <div class="form-group">
                 <label for="PageName">Name of the page</label>
@@ -129,7 +128,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deletePage" value="Delete Page">
-            <hr class="m-4">
+            <hr class="m-4"><br>
             <h2>Theme :</h2>
             <div class="form-group">
                 <?php
@@ -143,7 +142,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
                 </select>
             </div>
             <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
-            <hr class="m-4">
+            <hr class="m-4"><br>
             <h2>Grid :</h2>
             <small class="form-text text-muted">Grid is a border around Layouts for better visibilty.</small><br>
             <input type="submit" class="btn btn-warning" name="showGrid" value="Show/Remove Grid">
