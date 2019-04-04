@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-html {
-    font-family: 'Ubuntu', sans-serif;
-}
-
 main {
     margin-top: 40px;
 }
@@ -54,32 +48,21 @@ a:hover {
 }
 
 #layoutMain {
-    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Main&font=noto'); */
-    /* border-right: 4px solid lightgrey; */
     padding: 60px;
     padding-top: 20px;
     padding-bottom: 0;
 }
 
 #layoutAside {
-    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Aside&font=noto'); */
-    /* border-left: 4px solid lightgrey; */
     padding: 60px;
     padding-top: 20px;
     padding-bottom: 0;
 }
 
 #layoutBottom {
-    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Bottom&font=noto'); */
-    /* border-top: 8px solid lightgrey; */
     padding: 60px;
     padding-top: 0;
     margin-bottom: 56px;
-}
-
-#layoutHeader {
-    /* background-image: url('https://fakeimg.pl/156x100/?retina=1&text=Header&font=noto'); */
-    /* border-bottom: 8px solid lightgrey; */
 }
 
 p {
