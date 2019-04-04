@@ -68,11 +68,11 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <div class="form-group">
                 <label for="TypeSelection">Choose an element</label>
                 <select class="form-control" id="TypeSelection" name="type">
-                    <option value="2">Navbar</option>
-                    <option value="3">Title</option>
-                    <option value="4">Footer</option>
+                    <option value="2" <?php $req2 = $bdd->query('SELECT * FROM element WHERE element.type = 2'); if ($req2->rowCount() >= 1) { echo "disabled"; } ?>>Navbar</option>
+                    <option value="3" <?php $req3 = $bdd->query('SELECT * FROM element WHERE element.type = 3'); if ($req3->rowCount() >= 1) { echo "disabled"; } ?>>Title</option>
+                    <option value="4" <?php $req4 = $bdd->query('SELECT * FROM element WHERE element.type = 4'); if ($req4->rowCount() >= 1) { echo "disabled"; } ?>>Footer</option>
                     <option value="5">Text</option>
-                    <option value="6">Background Image</option>
+                    <option value="6" <?php $req5 = $bdd->query('SELECT * FROM element WHERE element.type = 6'); if ($req5->rowCount() >= 1) { echo "disabled"; } ?>>Background Image</option>
                     <option value="7">Image</option>
                     <option value="8">Youtube Video</option>
                 </select>
@@ -96,7 +96,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             </div>
             <div class="form-group">
                 <label for="ContentArea">Content</label>
-                <textarea class="form-control" id="ContentArea" rows="3" name="content" value=""></textarea>
+                <textarea class="form-control" id="ContentArea" rows="3" name="content" value="" required></textarea>
             </div>
             <input type="submit" class="btn btn-success" name="addElement" value="Add Element">
             <hr class="m-4">
@@ -105,6 +105,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             ?>
             <div class="form-group">
                 <label for="DeleteElement">Delete an element</label>
+                <!--
+                BUG : IF THERE IS NO NAVBAR IN THE DATABASE, NOTHING WILL BE DISPLAYED !
+                -->
                 <select class="form-control" id="DeleteElement" name="delete">
                     <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['type_name'] . " : " . $data['page'] . " | " . $data['layout_name'] . " -> \"" . $data['content'] . " \"</option>"; } ?>
                 </select>
@@ -114,7 +117,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <h2>Pages :</h2><br>
             <div class="form-group">
                 <label for="PageName">Name of the page</label>
-                <input type="text" class="form-control" id="PageName" rows="3" name="pageName" value="">
+                <input type="text" class="form-control" id="PageName" rows="3" name="pageName" value="" required>
             </div>
             <input type="submit" class="btn btn-success" name="createPage" value="Add Page">
             <hr class="m-4">
