@@ -10,6 +10,11 @@ if (isset($_POST['deleteElement'])) { // DELETE ELEMENT
     header("Location: /");
 }
 
+if (isset($_POST['deleteAllElement'])) { // DELETE ALL ELEMENTS
+    $req = $bdd->query('DELETE FROM element');
+    header("Location: /");
+}
+
 if (isset($_POST['createPage'])) { // CREATE A PAGE
     $req = $bdd->query('INSERT INTO page (name) VALUES ("' . $_POST["pageName"] . '")');
     header("Location: /".str_replace(' ', '', $_POST["pageName"]));
@@ -124,7 +129,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                     <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['type_name'] . " : " . $data['page'] . " | " . $data['layout_name'] . " -> \"" . $data['content'] . " \"</option>"; } ?>
                 </select>
             </div>
-            <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element">
+            <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element"><hr class="mb-4">
+            <input type="submit" class="btn btn-danger" name="deleteAllElement" value="Delete all Elements">
+            <small class="form-text text-muted">The elements are permanently deleted <i class="fas fa-exclamation-triangle"></i></small>
             <hr class="m-4"><br>
             <h2>Pages :</h2><br>
             
