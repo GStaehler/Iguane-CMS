@@ -96,7 +96,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             </div>
             <div class="form-group">
                 <label for="ContentArea">Content</label>
-                <textarea class="form-control" id="ContentArea" rows="3" name="content" value="" required></textarea>
+                <textarea class="form-control" id="ContentArea" rows="3" name="content" value=""></textarea>
             </div>
             <input type="submit" class="btn btn-success" name="addElement" value="Add Element">
             <hr class="m-4">
@@ -117,7 +117,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '
             <h2>Pages :</h2><br>
             <div class="form-group">
                 <label for="PageName">Name of the page</label>
-                <input type="text" class="form-control" id="PageName" rows="3" name="pageName" value="" required>
+                <input type="text" class="form-control" id="PageName" rows="3" name="pageName" value="">
             </div>
             <input type="submit" class="btn btn-success" name="createPage" value="Add Page">
             <hr class="m-4">

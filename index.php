@@ -1,7 +1,7 @@
 <?php
 
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '');
-$req = $bdd->query('SELECT page.id, page.name, element.content as content, site.theme as theme FROM site, page, element WHERE element.type = 2');
+$req = $bdd->query('SELECT page.id, page.name, site.theme as theme FROM site, page, element');
 
 $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
@@ -24,7 +24,7 @@ while ($data = $req->fetch()) {
                 require('model/layouts/LayoutHeader.php');
                 require('model/layouts/LayoutFooter.php');
                 require('model/NewPage.php');
-                echo "<title>" . $data['content'] . " - " . $data['name'] . "</title>";
+                echo "<title>" . $data['name'] . "</title>";
                 echo "<link rel=\"icon\" href=\"https://image.flaticon.com/icons/png/512/83/83946.png\">";
                 echo "<style>";
                 require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css");
