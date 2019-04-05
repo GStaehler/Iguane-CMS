@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 05 avr. 2019 à 09:50
+-- Généré le :  ven. 05 avr. 2019 à 11:58
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -100,6 +100,7 @@ CREATE TABLE `page` (
 --
 
 INSERT INTO `page` (`id`, `name`) VALUES
+(0, '0'),
 (3, 'page 2'),
 (10, 'page 3'),
 (11, 'Le Sahara');
@@ -231,7 +232,7 @@ ALTER TABLE `layout`
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `site`
