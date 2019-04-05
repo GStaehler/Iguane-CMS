@@ -1,4 +1,4 @@
-<?php
+<?php // BUG : IF THERE IS NO PAGES IN DATABASE, NOTHING IS DISPLAYED
 
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
 $req = $bdd->query('SELECT page.id, page.name, site.theme as theme FROM site, page, element');
