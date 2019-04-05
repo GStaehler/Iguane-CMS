@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  jeu. 04 avr. 2019 à 12:40
+-- Généré le :  ven. 05 avr. 2019 à 09:50
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `filrougephp`
+-- Base de données :  `iguane`
 --
 
 -- --------------------------------------------------------
@@ -62,7 +62,7 @@ INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
 (121, 7, 2, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ecoregion_PA1327.svg/1280px-Ecoregion_PA1327.svg.png', 11),
 (122, 5, 2, 'Les dayas (pluriel dayate ou daia (daiate), dhaia) sont des dépressions fermées d\'extension limitée (quelques mètres à 1 km de diamètre), au fond en général argileux ou argilo-sableux dans lesquelles l\'eau de ruissellement peut s\'accumuler. Une alternance d\'inondation et d\'exondation associée à une érosion éolienne participe à leur formation : parfois d\'origine karstique (dolines) sur certains plateaux par exemple, issues de la déflation éolienne ou mixtes. Elles constituent des zones de végétation pérennes.', 11),
 (123, 8, 1, 'https://www.youtube.com/watch?v=54RS8kAHybg', 11),
-(125, 2, 1, 'Fil Rouge', 0);
+(127, 2, 1, 'Fil Rouge', 0);
 
 -- --------------------------------------------------------
 
@@ -219,7 +219,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT pour la table `layout`

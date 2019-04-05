@@ -23,7 +23,7 @@ require('model/Page.php');
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Gauthier Staehler">
-    <?php $bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '');
+    <?php $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     $req = $bdd->query('SELECT element.content FROM element WHERE element.type = 2'); ?>
     <title><?php while ($data = $req->fetch()) { echo $data['content'] . " - "; } ?>Home</title>
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/83/83946.png">

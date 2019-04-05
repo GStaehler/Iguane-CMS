@@ -38,7 +38,7 @@ if (isset($_POST['showGrid'])) {
     header("Location: /");
 }
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=filrougephp;charset=utf8', 'root', '');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
 
 ?>
 
