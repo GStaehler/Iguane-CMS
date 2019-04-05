@@ -3,8 +3,6 @@
 class Table extends Element
 {
 
-    private $isMultiple = true;
-
     public function integrate(): void
     {
         $element = $this->getElement();

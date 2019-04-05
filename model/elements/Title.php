@@ -3,8 +3,6 @@
 class Title extends Element
 {
 
-    private $isMultiple = false;
-
     public function integrate(): void
     {
         global $bdd;

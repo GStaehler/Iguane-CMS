@@ -3,7 +3,6 @@
 abstract class Element
 {
 
-    private $isMultiple;
     private $bdd;
 
     public function isMultiple()

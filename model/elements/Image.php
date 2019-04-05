@@ -3,8 +3,6 @@
 class Image extends Element
 {
 
-    private $isMultiple = true;
-
     public function integrate($layout, $page): void
     {
         global $bdd;
