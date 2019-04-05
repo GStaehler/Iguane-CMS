@@ -15,9 +15,11 @@ class Navbar extends Element
             $bdd2 = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             $req2 = $bdd2->query('SELECT page.name FROM page');
             while($data2 = $req2->fetch()) {
-                echo "<li class=\"nav-item\">
-                        <a class=\"nav-link mr-4\" href=\"/" . str_replace(' ', '', $data2['name']) . "\">" . $data2['name'] . "</a>
-                      </li>";
+                if ($data2['name'] !== "0") {
+                    echo "<li class=\"nav-item\">
+                            <a class=\"nav-link mr-4\" href=\"/" . str_replace(' ', '', $data2['name']) . "\">" . $data2['name'] . "</a>
+                          </li>";
+                }
             }
         echo "</ul></nav></header>";
         }

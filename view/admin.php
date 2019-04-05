@@ -91,7 +91,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                 <label for="PageSelection">Select a page</label>
                 <select class="form-control" id="PageSelection" name="page">
                     <option value="0">Home</option>
-                    <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['name'] . "</option>"; } ?>
+                    <?php while ($data = $req->fetch()) { if($data['name'] !== "0") { echo "<option value=\"" . $data['id'] . "\">" . $data['name'] . "</option>"; } } ?>
                 </select>
             </div>
             <div class="form-group">
@@ -127,7 +127,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <div class="form-group">
                 <label for="DeletePage">Delete a page</label>
                 <select class="form-control" id="DeletePage" name="deletePages">
-                    <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['name']; } ?>
+                    <?php while ($data = $req->fetch()) { if($data['name'] !== "0") { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['name']; } } ?>
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deletePage" value="Delete Page">
