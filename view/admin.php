@@ -1,31 +1,31 @@
 <?php
 
-if (isset($_POST['addElement'])) {
+if (isset($_POST['addElement'])) { // ADD ELEMENT
     $req = $bdd->query('INSERT INTO element (type, content, layout, page) VALUES ("' . $_POST["type"] . '", "' . $_POST["content"] . '", "' . $_POST["layout"] . '", "' . $_POST["page"] . '")');
     header("Location: /");
 }
 
-if (isset($_POST['deleteElement'])) {
+if (isset($_POST['deleteElement'])) { // DELETE ELEMENT
     $req = $bdd->query('DELETE FROM element WHERE id = ' . $_POST["delete"] . '');
     header("Location: /");
 }
 
-if (isset($_POST['createPage'])) {
+if (isset($_POST['createPage'])) { // CREATE A PAGE
     $req = $bdd->query('INSERT INTO page (name) VALUES ("' . $_POST["pageName"] . '")');
     header("Location: /".str_replace(' ', '', $_POST["pageName"]));
 }
 
-if (isset($_POST['deletePage'])) {
+if (isset($_POST['deletePage'])) { // DELETE A PAGE
     $req = $bdd->query('DELETE FROM page WHERE id = ' . $_POST["deletePages"] . '');
     header("Location: /");
 }
 
-if (isset($_POST['changeTheme'])) {
+if (isset($_POST['changeTheme'])) { // CHANGE THE THEME
     $req = $bdd->query('UPDATE site SET theme = ' . $_POST["theme"] . ' WHERE site.id = 1');
     header("Location: /");
 }
 
-if (isset($_POST['showGrid'])) {
+if (isset($_POST['showGrid'])) { // SHOW THE GRID
     $req2 = $bdd->query('SELECT grid FROM site');
     while ($data = $req2->fetch()) {
         if ($data['grid'] == 0) {
@@ -65,6 +65,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
         <hr class="m-4"><br>
         <h2>Elements :</h2><br>
         <form action="" method="post">
+            
+            <!-- CHOOSE AN ELEMENT -->
+            
             <div class="form-group">
                 <label for="TypeSelection">Choose an element</label>
                 <select class="form-control" id="TypeSelection" name="type">
@@ -78,6 +81,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                 </select>
                 <small class="form-text text-muted">Navbar, Title, Footer and Background Image are unique and can not be created more than once. When creating a page, the Title element of the new page is generated from its name. Navbar, Footer and Background Image are the same on every page.</small>
             </div>
+            
+            <!-- SELECT A LAYOUT -->
+            
             <div class="form-group">
                 <label for="LayoutSelection">Select a layout</label>
                 <select class="form-control" id="LayoutSelection" name="layout">
@@ -87,6 +93,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                 </select>
             </div>
             <?php $req = $bdd->query('SELECT page.name, page.id FROM page ORDER BY page.id'); ?>
+            
+            <!-- SELECT A PAGE -->
+            
             <div class="form-group">
                 <label for="PageSelection">Select a page</label>
                 <select class="form-control" id="PageSelection" name="page">
@@ -94,6 +103,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                     <?php while ($data = $req->fetch()) { if($data['name'] !== "0") { echo "<option value=\"" . $data['id'] . "\">" . $data['name'] . "</option>"; } } ?>
                 </select>
             </div>
+            
+            <!-- CONTENT OF THE ELEMENT -->
+            
             <div class="form-group">
                 <label for="ContentArea">Content</label>
                 <textarea class="form-control" id="ContentArea" rows="3" name="content" value=""></textarea>
@@ -103,11 +115,11 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <?php
             $req = $bdd->query('SELECT element.id, element.type, element.layout, SUBSTRING(element.content, 1, 120) AS content, element.page, type.name as type_name, layout.name as layout_name FROM element INNER JOIN type ON element.type = type.id INNER JOIN layout ON element.layout = layout.id ORDER BY element.id');
             ?>
+            
+            <!-- DELETE AN ELEMENT -->
+            
             <div class="form-group">
                 <label for="DeleteElement">Delete an element</label>
-                <!--
-                BUG : IF THERE IS NO NAVBAR IN THE DATABASE, NOTHING WILL BE DISPLAYED !
-                -->
                 <select class="form-control" id="DeleteElement" name="delete">
                     <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['type_name'] . " : " . $data['page'] . " | " . $data['layout_name'] . " -> \"" . $data['content'] . " \"</option>"; } ?>
                 </select>
@@ -115,6 +127,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element">
             <hr class="m-4"><br>
             <h2>Pages :</h2><br>
+            
+            <!-- ADD A PAGE -->
+            
             <div class="form-group">
                 <label for="PageName">Name of the page</label>
                 <input type="text" class="form-control" id="PageName" rows="3" name="pageName" value="">
@@ -124,6 +139,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <?php
             $req = $bdd->query('SELECT page.id, page.name FROM page ORDER BY page.id');
             ?>
+            
+            <!-- DELETE A PAGE -->
+            
             <div class="form-group">
                 <label for="DeletePage">Delete a page</label>
                 <select class="form-control" id="DeletePage" name="deletePages">
@@ -132,6 +150,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             </div>
             <input type="submit" class="btn btn-danger" name="deletePage" value="Delete Page">
             <hr class="m-4"><br>
+            
+            <!-- CHANGE THE THEME -->
+            
             <h2>Theme :</h2>
             <div class="form-group">
                 <?php
@@ -146,6 +167,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             </div>
             <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
             <hr class="m-4"><br>
+            
+            <!-- SHOW THE GRID -->
+            
             <h2>Grid :</h2>
             <small class="form-text text-muted">Grid is a border around Layouts for better visibilty.</small><br>
             <input type="submit" class="btn btn-warning" name="showGrid" value="Show/Remove Grid">

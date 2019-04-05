@@ -1,4 +1,4 @@
-<?php // BUG : IF THERE IS NO PAGES IN DATABASE, NOTHING IS DISPLAYED
+<?php
 
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
 $req = $bdd->query('SELECT page.id, page.name, site.theme as theme FROM site, page');
@@ -7,7 +7,7 @@ $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
 while ($data = $req->fetch()) {
     switch ($request_uri[0]) {
-            case '/'.str_replace(' ', '', $data['name']):
+            case '/'.str_replace(' ', '', $data['name']): // GENERATED PAGES
                 require('model/elements/Element.php');
                 require('model/elements/Image.php');
                 require('model/elements/Video.php');
@@ -41,7 +41,7 @@ while ($data = $req->fetch()) {
                 echo "<div id=\"layoutHeader\">";
                 $navbar = new Navbar;
                 $navbar->integrate();
-                if ($data['theme'] == 2) {
+                if ($data['theme'] == 2) { // CHANGE THEME
                     echo "<h1 class=\"text-center darkTheme\">" . $data['name'] . "</h1>";
                 }
                 else {
@@ -54,10 +54,10 @@ while ($data = $req->fetch()) {
                 $layoutFooter->integrate();
                 echo "</body></html>";
                 break;
-            case '/':
+            case '/': // HOME PAGE
                 require_once 'view/view.php';
                 break;
-            case '/admin':
+            case '/admin': // ADMIN PAGE
                 require_once 'view/admin.php';
                 break;
             default:
