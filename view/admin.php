@@ -83,6 +83,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                     <option value="6" <?php $req5 = $bdd->query('SELECT * FROM element WHERE element.type = 6'); if ($req5->rowCount() >= 1) { echo "disabled"; } ?>>Background Image</option>
                     <option value="7">Image</option>
                     <option value="8">Youtube Video</option>
+                    <option value="9">HTML Code</option>
                 </select>
                 <small class="form-text text-muted">Navbar, Title, Footer and Background Image are unique and can not be created more than once. When creating a page, the Title element of the new page is generated from its name. Navbar, Footer and Background Image are the same on every page.</small>
             </div>

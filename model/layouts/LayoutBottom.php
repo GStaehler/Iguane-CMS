@@ -15,6 +15,8 @@ class LayoutBottom extends Layout
         $img->integrate(3, $page);
         $text = new Text;
         $text->integrate(3, $page);
+        $code = new Code;
+        $code->integrate(3, $page);
         $vid = new Video;
         $vid->integrate(3, $page);
         echo "</div>";

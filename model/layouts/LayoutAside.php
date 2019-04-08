@@ -13,6 +13,8 @@ class LayoutAside extends Layout
         echo "\">";
         $text = new Text;
         $text->integrate(2, $page);
+        $code = new Code;
+        $code->integrate(2, $page);
         $img = new Image;
         $img->integrate(2, $page);
         $vid = new Video;
