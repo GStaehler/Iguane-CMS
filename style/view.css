@@ -109,3 +109,19 @@ p {
     border-bottom: 4px solid red;
     border-left: 4px solid red;
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .imageElement,
+    .youtubeVideo {
+        width: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .imageElement,
+    .youtubeVideo {
+        width: 100%;
+    }
+}

@@ -8,7 +8,7 @@ class LayoutAside extends Layout
         global $bdd;
         parent::getDatabase();
         $req = $bdd->query('SELECT site.grid AS grid FROM site');
-        echo "<div id=\"layoutAside\" class=\"col-4 container";
+        echo "<div id=\"layoutAside\" class=\"col-lg-4 col-md-4 col-sm-12 container";
         while ($data = $req->fetch()) { if($data['grid' == 1]) { echo " grid"; }}
         echo "\">";
         $text = new Text;

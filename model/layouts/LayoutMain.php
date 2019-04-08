@@ -8,7 +8,7 @@ class LayoutMain extends Layout
         global $bdd;
         parent::getDatabase();
         $req = $bdd->query('SELECT site.grid AS grid FROM site');
-        echo "<div id=\"layoutMain\" class=\"col-8 container";
+        echo "<div id=\"layoutMain\" class=\"col-lg-8 col-md-8 col-sm-12 container";
         while ($data = $req->fetch()) { if($data['grid' == 1]) { echo " grid"; }}
         echo "\">";
         $img = new Image;
