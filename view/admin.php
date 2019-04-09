@@ -22,6 +22,7 @@ if (isset($_POST['createPage'])) { // CREATE A PAGE
 
 if (isset($_POST['deletePage'])) { // DELETE A PAGE
     $req = $bdd->query('DELETE FROM page WHERE id = ' . $_POST["deletePages"] . '');
+    $req = $bdd->query('DELETE FROM element WHERE page = ' . $_POST["deletePages"] . '');
     header("Location: /");
 }
 
@@ -60,9 +61,10 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     <link rel="stylesheet" href="vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
 </head>
 
-<body>
+<body style="font-family: 'Noto Sans', sans-serif;">
     <a class="fas fa-eye fa-3x" href="/"></a>
     <div id="administration" class="container"><br><br>
         <small class="form-text text-muted">Gauthier Staehler</small>
@@ -126,13 +128,13 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             
             <div class="form-group">
                 <label for="DeleteElement">Delete an element</label>
+                <small class="form-text text-muted">The elements are permanently deleted <i class="fas fa-exclamation-triangle"></i></small><br>
                 <select class="form-control" id="DeleteElement" name="delete">
                     <?php while ($data = $req->fetch()) { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['type_name'] . " : " . $data['page'] . " | " . $data['layout_name'] . " -> \"" . $data['content'] . " \"</option>"; } ?>
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element"><hr class="m-4">
             <input type="submit" class="btn btn-danger" name="deleteAllElement" value="Delete all Elements">
-            <small class="form-text text-muted">The elements are permanently deleted <i class="fas fa-exclamation-triangle"></i></small>
             <hr class="m-4"><br>
             <h2>Pages :</h2><br>
             
@@ -152,6 +154,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             
             <div class="form-group">
                 <label for="DeletePage">Delete a page</label>
+                <small class="form-text text-muted">The elements of the page are also deleted <i class="fas fa-exclamation-triangle"></i></small><br>
                 <select class="form-control" id="DeletePage" name="deletePages">
                     <?php while ($data = $req->fetch()) { if($data['name'] !== "0") { echo "<option value=\"" . $data['id'] . "\">" . $data['id'] . " : " . $data['name']; } } ?>
                 </select>

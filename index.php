@@ -34,10 +34,12 @@ while ($data = $req->fetch()) {
                 require_once("style/view.css");
                 echo "</style>";
                 echo "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\">";
+                echo "<link href=\"https://fonts.googleapis.com/css?family=Noto+Sans\" rel=\"stylesheet\">";
                 echo "<body";
                 $background = new Background;
                 $background->integrate();
                 echo ">";
+                echo "<div style=\"font-family: 'Noto Sans', sans-serif;\">";
                 echo  "<a class=\"fas fa-cogs fa-3x\" href=\"/admin\"></a>";
                 echo "<div id=\"layoutHeader\">";
                 $navbar = new Navbar;
@@ -53,7 +55,7 @@ while ($data = $req->fetch()) {
                 $page->integrate($data['id']);
                 $layoutFooter = new LayoutFooter;
                 $layoutFooter->integrate();
-                echo "</body></html>";
+                echo "</div></body></html>";
                 break;
             case '/': // HOME PAGE
                 require_once 'view/view.php';
