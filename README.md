@@ -30,4 +30,5 @@ Iguane is a study project at UHA 4.0 Mulhouse developed over a six-week period.
   - Add a Page
   - Delete a Page (The elements of the page are also deleted)
   - Change Theme (Text Color)
+  - Two different Themes : Black and White
   - Show or Remove the Grid, Grid is a border around Layouts for better visibility
