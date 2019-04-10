@@ -8,22 +8,7 @@ $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 while ($data = $req->fetch()) {
     switch ($request_uri[0]) {
             case '/'.str_replace(' ', '', $data['name']): // GENERATED PAGES
-                require('model/elements/Element.php');
-                require('model/elements/Image.php');
-                require('model/elements/Video.php');
-                require('model/elements/Table.php');
-                require('model/elements/Navbar.php');
-                require('model/elements/Title.php');
-                require('model/elements/Footer.php');
-                require('model/elements/Text.php');
-                require('model/elements/Background.php');
-                require('model/elements/Code.php');
-                require('model/layouts/Layout.php');
-                require('model/layouts/LayoutMain.php');
-                require('model/layouts/LayoutAside.php');
-                require('model/layouts/LayoutBottom.php');
-                require('model/layouts/LayoutHeader.php');
-                require('model/layouts/LayoutFooter.php');
+                require('controller/controller.php');
                 require('model/NewPage.php');
                 echo "<title>" . $data['name'] . "</title>";
                 echo "<link rel=\"icon\" href=\"https://image.flaticon.com/icons/png/512/83/83946.png\">";
