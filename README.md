@@ -6,7 +6,7 @@ Content Management System for publishing web content. Iguane is written in PHP, 
 
 Iguane is a study project at UHA 4.0 Mulhouse developed over a six-week period.
 
-### Installation :
+### Installation
 
 ```sh
 - Clone the repository into your local folder
