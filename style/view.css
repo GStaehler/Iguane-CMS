@@ -71,7 +71,7 @@ p {
     margin-bottom: 32px;
 }
 
-.imageElement {
+.imageElement, .youtubeVideo {
     width: 60%;
     height: 292px;
     display: block;
@@ -86,18 +86,6 @@ p {
 
 #layoutAside .imageElement {
     width: 86%;
-}
-
-.youtubeVideo {
-    width: 60%;
-    height: 280px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 4px;
 }
 
 .darkTheme {
