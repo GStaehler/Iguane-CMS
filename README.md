@@ -1,6 +1,5 @@
-# Iguane CMS
-
 ![](https://github.com/GStaehler/Iguane-CMS/blob/master/images/logo.png)
+---
 
 Content Management System for publishing web content. Iguane is written in PHP, is responsive, uses object-oriented-programming techniques and stores data in a MySQL database. Designed with Bootstrap and FontAwesome.
 
