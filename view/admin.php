@@ -210,7 +210,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             
             <!-- ACCOUNT -->
             
-            <h2>Account :</h2><br>
+            <h2>User details :</h2><br>
             <div class="form-group">
                 <label for="Username">Username</label>
                 <input type="text" class="form-control" id="Username" rows="3" name="username" value="">
