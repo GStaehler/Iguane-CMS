@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if (isset($_POST['addElement'])) { // ADD ELEMENT
     $req = $bdd->query('INSERT INTO element (type, content, layout, page) VALUES ("' . $_POST["type"] . '", "' . $_POST["content"] . '", "' . $_POST["layout"] . '", "' . $_POST["page"] . '")');
     header("Location: /");
@@ -44,6 +46,12 @@ if (isset($_POST['showGrid'])) { // SHOW THE GRID
     header("Location: /");
 }
 
+if (isset($_POST['disconnect'])) {
+    session_unset();
+    session_destroy();
+    header("Location: /");
+}
+
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
 
 ?>
@@ -69,6 +77,11 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     <div id="administration" class="container"><br><br>
         <small class="form-text text-muted">Gauthier Staehler</small>
         <h1><span style="text-decoration: overline; font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span> - Administration</h1>
+        <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
+        echo "<br>Welcome <code class=\"lead\">" . $_SESSION['username'] . "</code> !<br>";
+        echo "<form action=\"\" method=\"post\">";
+        echo "<input type=\"submit\" class=\"btn btn-sm btn-success mt-2\" name=\"disconnect\" value=\"Disconnect\">";
+        echo "</form>"; } ?>
         <hr class="m-4"><br>
         <h2>Elements :</h2><br>
         <form action="" method="post">
@@ -168,7 +181,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <div class="form-group">
                 <?php
                 $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
-                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 6px; bottom: 1.5px;\">Current Theme : </small><code style=\"position: relative; left: 6px;\">" . $data['theme_name'] . "</code><br><br>"; };
+                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 6px; bottom: 1.5px;\">Current Theme : </small><code class=\"lead\" style=\"position: relative; left: 6px;\">" . $data['theme_name'] . "</code><br><br>"; };
                 ?>
                 <label for="ThemeSelection">Select a theme</label>
                 <select class="form-control" id="ThemeSelection" name="theme">

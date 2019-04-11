@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gauthier Staehler - Fil Rouge 4.0.2 Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
+    <style><?php require_once("style/view.css"); ?></style>
 </head>
 
 <body class="container">
-<form action="../admin.php" method="get">
+<a class="fas fa-eye fa-3x" href="/"></a>
+<form action="" method="post">
     <h1>Login</h1>
     <hr>
     <br>
@@ -36,23 +39,11 @@
 <?php
 if (isset($_POST['submitLogin'])) {
 
-    session_start();
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-
-    if ($username !== "admin" && $password !== "admin") {
-        header("Location: login.php");
+    if ($_POST['username'] == "admin" && $_POST['password'] == "admin") {
+        session_start();
+        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['password'] = $_POST['password'];
+        header("Location: /admin");
     }
 }
-
-///////////////////////////////////////////////////////////////////////
-
-// session_start();
-// $username = $_GET['username'];
-// $password = $_GET['password'];
-// if($username !== "admin" && $password !== "password") {
-// if (session_status() !== PHP_SESSION_DISABLED) {
-// header("Location: login/login.php");
-// }
-// }
 ?>

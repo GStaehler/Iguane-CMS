@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
 $req = $bdd->query('SELECT page.id, page.name, site.theme as theme FROM site, page');
 
@@ -46,7 +48,12 @@ while ($data = $req->fetch()) {
                 require_once 'view/view.php';
                 break;
             case '/admin': // ADMIN PAGE
-                require_once 'view/admin.php';
+                if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
+                    require_once 'view/admin.php';
+                }
+                else {
+                    require_once 'view/login/login.php';
+                }
                 break;
             default:
                 // header('HTTP/1.0 404 Not Found');
