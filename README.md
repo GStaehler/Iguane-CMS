@@ -1,5 +1,7 @@
 # Iguane CMS
 
+![](https://github.com/GStaehler/Iguane-CMS/blob/master/images/logo.png)
+
 Content Management System for publishing web content. Iguane is written in PHP, is responsive, uses object-oriented-programming techniques and stores data in a MySQL database. Designed with Bootstrap and FontAwesome.
 
 ### Developed by Gauthier Staehler
@@ -32,3 +34,7 @@ Iguane is a study project at UHA 4.0 Mulhouse developed over a six-week period.
   - Change Theme (Text Color)
   - Two different Themes : Black and White
   - Show or Remove the Grid, Grid is a border around Layouts for better visibility
+
+### Login
+
+Default username and password : admin
