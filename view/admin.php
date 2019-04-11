@@ -46,9 +46,15 @@ if (isset($_POST['showGrid'])) { // SHOW THE GRID
     header("Location: /");
 }
 
-if (isset($_POST['disconnect'])) {
+if (isset($_POST['disconnect'])) { // DISCONNECT FROM SESSION
     session_unset();
     session_destroy();
+    header("Location: /");
+}
+
+if (isset($_POST['changeUsernamePassword'])) { // CHANGE USERNAME AND PASSWORD
+    $req = $bdd->query('UPDATE user SET name = "' . $_POST["username"] . '" WHERE user.id = 1');
+    $req = $bdd->query('UPDATE user SET password = "' . $_POST["password"] . '" WHERE user.id = 1');
     header("Location: /");
 }
 
@@ -78,7 +84,10 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
         <small class="form-text text-muted">Gauthier Staehler</small>
         <h1><span style="text-decoration: overline; font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span> - Administration</h1>
         <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
-        echo "<br>Welcome <code class=\"lead\">" . $_SESSION['username'] . "</code> !<br>";
+        $req = $bdd->query('SELECT name FROM user');
+        while ($data = $req->fetch()) { 
+            echo "<br>Welcome <code class=\"lead\">" . $data['name'] . "</code> !<br>";
+        }
         echo "<form action=\"\" method=\"post\">";
         echo "<input type=\"submit\" class=\"btn btn-sm btn-success mt-2\" name=\"disconnect\" value=\"Disconnect\">";
         echo "</form>"; } ?>
@@ -197,6 +206,19 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <h2>Grid :</h2>
             <small class="form-text text-muted">Grid is a border around Layouts for better visibilty.</small><br>
             <input type="submit" class="btn btn-warning" name="showGrid" value="Show/Remove Grid">
+            <hr class="m-4"><br>
+            
+            <!-- ACCOUNT -->
+            
+            <h2>Account :</h2><br>
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <input type="text" class="form-control" id="Username" rows="3" name="username" value="">
+                <br>
+                <label for="Password">Password</label>
+                <input type="text" class="form-control" id="Password" rows="3" name="password" value="">
+            </div>
+            <input type="submit" class="btn btn-danger" name="changeUsernamePassword" value="Change Username and Password">
             <br class="mb-5">
         </form>
         <br>

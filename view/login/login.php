@@ -37,13 +37,19 @@
 </html>
 
 <?php
-if (isset($_POST['submitLogin'])) {
 
-    if ($_POST['username'] == "admin" && $_POST['password'] == "admin") {
-        session_start();
-        $_SESSION['username'] = $_POST['username'];
-        $_SESSION['password'] = $_POST['password'];
-        header("Location: /admin");
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
+$req = $bdd->query('SELECT name, password FROM user');
+while ($data = $req->fetch()) {
+    
+    if (isset($_POST['submitLogin'])) {
+
+        if ($_POST['username'] == $data['name'] && $_POST['password'] == $data['password']) {
+            session_start();
+            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['password'] = $_POST['password'];
+            header("Location: /admin");
+        }
     }
 }
 ?>
