@@ -76,7 +76,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 </head>
 
 <body style="font-family: 'Noto Sans', sans-serif;">
@@ -236,15 +236,10 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
 </body>
     
 <script>
-        $(function() {
-        /**
-        * Smooth scrolling to page anchor on click
-        **/
+    
+    $(function() { // SMOOTH SCROLLING
         $("a[href*='#']:not([href='#'])").click(function() {
-            if (
-                location.hostname == this.hostname
-                && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
-            ) {
+            if (location.hostname == this.hostname && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")) {
                 var anchor = $(this.hash);
                 anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
                 if ( anchor.length ) {
@@ -254,6 +249,16 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             return false;
         });
     });
+    
+    /* $(document).ready(function() {
+        $("#TypeSelection").change(function() {
+            if ($("#TypeSelection option[value='2']").is(":selected")) {
+                console.log("ok");
+                $('#LayoutSelection').attr('disabled', 'disabled');
+            }
+        });
+    }); */
+    
 </script>
 
 </html>
