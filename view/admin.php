@@ -92,7 +92,14 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
         echo "<input type=\"submit\" class=\"btn btn-sm btn-success mt-2\" name=\"disconnect\" value=\"Disconnect\">";
         echo "</form>"; } ?>
         <hr class="m-4"><br>
-        <h2>Elements :</h2><br>
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-link" href="#elementsTitle">Elements</a>
+            <a class="btn btn-link" href="#pagesTitle">Pages</a>
+            <a class="btn btn-link" href="#themeTitle">Theme</a>
+            <a class="btn btn-link" href="#gridTitle">Grid</a>
+            <a class="btn btn-link" href="#userTitle">User details</a>
+        </div><br>
+        <h2 id="elementsTitle">Elements :</h2><br>
         <form action="" method="post">
             
             <!-- CHOOSE AN ELEMENT -->
@@ -158,7 +165,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element"><hr class="m-4">
             <input type="submit" class="btn btn-danger" name="deleteAllElement" value="Delete all Elements">
             <hr class="m-4"><br>
-            <h2>Pages :</h2><br>
+            <h2 id="pagesTitle">Pages :</h2><br>
             
             <!-- ADD A PAGE -->
             
@@ -186,7 +193,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             
             <!-- CHANGE THE THEME -->
             
-            <h2>Theme :</h2>
+            <h2 id="themeTitle">Theme :</h2>
             <div class="form-group">
                 <?php
                 $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
@@ -203,14 +210,14 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             
             <!-- SHOW THE GRID -->
             
-            <h2>Grid :</h2>
+            <h2 id="gridTitle">Grid :</h2>
             <small class="form-text text-muted">Grid is a border around Layouts for better visibilty.</small><br>
             <input type="submit" class="btn btn-warning" name="showGrid" value="Show/Remove Grid">
             <hr class="m-4"><br>
             
             <!-- ACCOUNT -->
             
-            <h2>User details :</h2><br>
+            <h2 id="userTitle">User details :</h2><br>
             <div class="form-group">
                 <label for="Username">Username</label>
                 <input type="text" class="form-control" id="Username" rows="3" name="username" value="">
@@ -219,7 +226,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                 <input type="text" class="form-control" id="Password" rows="3" name="password" value="">
             </div>
             <input type="submit" class="btn btn-danger" name="changeUsernamePassword" value="Change Username and Password">
-            <br class="mb-5">
+            <br style="margin-bottom: 200px;">
         </form>
         <br>
         <br>
