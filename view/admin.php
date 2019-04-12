@@ -76,7 +76,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="../vendor/jquery-3.4.0.js"></script>
 </head>
 
 <body style="font-family: 'Noto Sans', sans-serif;">
@@ -251,7 +251,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
         });
     });
     
-    $(document).ready(function() {
+    $(document).ready(function() { // DISABLED LAYOUT AND PAGE SELECTION FOR UNIQUE ELEMENTS
         $("#TypeSelection").change(function() {
             if ($("#navbar").is(":selected")) {
                 $('#LayoutSelection').attr('disabled', 'disabled');
