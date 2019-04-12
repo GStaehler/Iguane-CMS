@@ -108,11 +108,11 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <div class="form-group">
                 <label for="TypeSelection">Choose an element</label>
                 <select class="form-control" id="TypeSelection" name="type">
-                    <option value="2" <?php $req2 = $bdd->query('SELECT * FROM element WHERE element.type = 2'); if ($req2->rowCount() >= 1) { echo "disabled"; } ?>>Navbar</option>
-                    <option value="3" <?php $req3 = $bdd->query('SELECT * FROM element WHERE element.type = 3'); if ($req3->rowCount() >= 1) { echo "disabled"; } ?>>Title</option>
-                    <option value="4" <?php $req4 = $bdd->query('SELECT * FROM element WHERE element.type = 4'); if ($req4->rowCount() >= 1) { echo "disabled"; } ?>>Footer</option>
+                    <option id="navbar" value="2" <?php $req2 = $bdd->query('SELECT * FROM element WHERE element.type = 2'); if ($req2->rowCount() >= 1) { echo "disabled"; } ?>>Navbar</option>
+                    <option id="title" value="3" <?php $req3 = $bdd->query('SELECT * FROM element WHERE element.type = 3'); if ($req3->rowCount() >= 1) { echo "disabled"; } ?>>Title</option>
+                    <option id="footer" value="4" <?php $req4 = $bdd->query('SELECT * FROM element WHERE element.type = 4'); if ($req4->rowCount() >= 1) { echo "disabled"; } ?>>Footer</option>
                     <option value="5">Text</option>
-                    <option value="6" <?php $req5 = $bdd->query('SELECT * FROM element WHERE element.type = 6'); if ($req5->rowCount() >= 1) { echo "disabled"; } ?>>Background Image</option>
+                    <option id="bckimg" value="6" <?php $req5 = $bdd->query('SELECT * FROM element WHERE element.type = 6'); if ($req5->rowCount() >= 1) { echo "disabled"; } ?>>Background Image</option>
                     <option value="7">Image</option>
                     <option value="8">Youtube Video</option>
                     <option value="9">HTML Code</option>
@@ -250,14 +250,30 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
         });
     });
     
-    /* $(document).ready(function() {
+    $(document).ready(function() {
         $("#TypeSelection").change(function() {
-            if ($("#TypeSelection option[value='2']").is(":selected")) {
-                console.log("ok");
+            if ($("#navbar").is(":selected")) {
                 $('#LayoutSelection').attr('disabled', 'disabled');
+                $('#PageSelection').attr('disabled', 'disabled');
+            }
+            else if ($("#title").is(":selected")) {
+                $('#LayoutSelection').attr('disabled', 'disabled');
+                $('#PageSelection').attr('disabled', 'disabled');
+            }
+            else if ($("#footer").is(":selected")) {
+                $('#LayoutSelection').attr('disabled', 'disabled');
+                $('#PageSelection').attr('disabled', 'disabled');
+            }
+            else if ($("#bckimg").is(":selected")) {
+                $('#LayoutSelection').attr('disabled', 'disabled');
+                $('#PageSelection').attr('disabled', 'disabled');
+            }
+            else {
+                $('#LayoutSelection').removeAttr('disabled');
+                $('#PageSelection').removeAttr('disabled');
             }
         });
-    }); */
+    });
     
 </script>
 
