@@ -108,6 +108,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <div class="form-group">
                 <label for="TypeSelection">Choose an element</label>
                 <select class="form-control" id="TypeSelection" name="type">
+                    <option></option>
                     <option id="navbar" value="2" <?php $req2 = $bdd->query('SELECT * FROM element WHERE element.type = 2'); if ($req2->rowCount() >= 1) { echo "disabled"; } ?>>Navbar</option>
                     <option id="title" value="3" <?php $req3 = $bdd->query('SELECT * FROM element WHERE element.type = 3'); if ($req3->rowCount() >= 1) { echo "disabled"; } ?>>Title</option>
                     <option id="footer" value="4" <?php $req4 = $bdd->query('SELECT * FROM element WHERE element.type = 4'); if ($req4->rowCount() >= 1) { echo "disabled"; } ?>>Footer</option>
