@@ -75,7 +75,8 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     <link rel="stylesheet" href="vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 </head>
 
 <body style="font-family: 'Noto Sans', sans-serif;">
@@ -98,8 +99,8 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             <a class="btn btn-link" href="#themeTitle">Theme</a>
             <a class="btn btn-link" href="#gridTitle">Grid</a>
             <a class="btn btn-link" href="#userTitle">User details</a>
-        </div><br>
-        <h2 id="elementsTitle">Elements :</h2><br>
+        </div><br id="elementsTitle">
+        <h2>Elements :</h2><br>
         <form action="" method="post">
             
             <!-- CHOOSE AN ELEMENT -->
@@ -164,8 +165,8 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             </div>
             <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element"><hr class="m-4">
             <input type="submit" class="btn btn-danger" name="deleteAllElement" value="Delete all Elements">
-            <hr class="m-4"><br>
-            <h2 id="pagesTitle">Pages :</h2><br>
+            <hr id="pagesTitle" class="m-4"><br>
+            <h2>Pages :</h2><br>
             
             <!-- ADD A PAGE -->
             
@@ -189,11 +190,11 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deletePage" value="Delete Page">
-            <hr class="m-4"><br>
+            <hr id="themeTitle" class="m-4"><br>
             
             <!-- CHANGE THE THEME -->
             
-            <h2 id="themeTitle">Theme :</h2>
+            <h2>Theme :</h2>
             <div class="form-group">
                 <?php
                 $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
@@ -206,18 +207,18 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                 </select>
             </div>
             <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
-            <hr class="m-4"><br>
+            <hr id="gridTitle" class="m-4"><br>
             
             <!-- SHOW THE GRID -->
             
-            <h2 id="gridTitle">Grid :</h2>
+            <h2>Grid :</h2>
             <small class="form-text text-muted">Grid is a border around Layouts for better visibilty.</small><br>
             <input type="submit" class="btn btn-warning" name="showGrid" value="Show/Remove Grid">
-            <hr class="m-4"><br>
+            <hr id="userTitle" class="m-4"><br>
             
             <!-- ACCOUNT -->
             
-            <h2 id="userTitle">User details :</h2><br>
+            <h2>User details :</h2><br>
             <div class="form-group">
                 <label for="Username">Username</label>
                 <input type="text" class="form-control" id="Username" rows="3" name="username" value="">
@@ -233,5 +234,26 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
         <br>
     </div>
 </body>
+    
+<script>
+        $(function() {
+        /**
+        * Smooth scrolling to page anchor on click
+        **/
+        $("a[href*='#']:not([href='#'])").click(function() {
+            if (
+                location.hostname == this.hostname
+                && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
+            ) {
+                var anchor = $(this.hash);
+                anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
+                if ( anchor.length ) {
+                    $("html, body").animate( { scrollTop: anchor.offset().top }, 1500);
+                }
+            }
+            return false;
+        });
+    });
+</script>
 
 </html>
