@@ -3,7 +3,7 @@
 class Text extends Element
 {
 
-    public function integrate($layout, $page): void
+    function __construct($layout, $page)
     {
         global $bdd;
         parent::getDatabase();

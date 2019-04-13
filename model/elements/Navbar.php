@@ -3,7 +3,7 @@
 class Navbar extends Element
 {
 
-    public function integrate(): void
+    function __construct()
     {
         global $bdd;
         parent::getDatabase();

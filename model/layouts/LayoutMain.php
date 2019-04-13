@@ -3,7 +3,7 @@
 class LayoutMain extends Layout
 {
     
-    public function integrate($page): void
+    function __construct($page)
     {
         global $bdd;
         parent::getDatabase();
@@ -11,14 +11,10 @@ class LayoutMain extends Layout
         echo "<div id=\"layoutMain\" class=\"col-lg-8 col-md-8 col-sm-12 container";
         while ($data = $req->fetch()) { if($data['grid' == 1]) { echo " grid"; }}
         echo "\">";
-        $img = new Image;
-        $img->integrate(1, $page);
-        $text = new Text;
-        $text->integrate(1, $page);
-        $code = new Code;
-        $code->integrate(1, $page);
-        $vid = new Video;
-        $vid->integrate(1, $page);
+        $img = new Image(1, $page);
+        $text = new Text(1, $page);
+        $code = new Code(1, $page);
+        $vid = new Video(1, $page);
         echo "</div>";
     }
     

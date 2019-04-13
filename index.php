@@ -24,13 +24,11 @@ while ($data = $req->fetch()) {
                 echo "<link href=\"https://fonts.googleapis.com/css?family=Noto+Sans\" rel=\"stylesheet\">";
                 echo "<body";
                 $background = new Background;
-                $background->integrate();
                 echo ">";
                 echo "<div style=\"font-family: 'Noto Sans', sans-serif;\">";
                 echo  "<a class=\"fas fa-cogs fa-3x\" href=\"/admin\"></a>";
                 echo "<div id=\"layoutHeader\">";
                 $navbar = new Navbar;
-                $navbar->integrate();
                 if ($data['theme'] == 2) { // CHANGE THEME
                     echo "<h1 class=\"text-center darkTheme\">" . $data['name'] . "</h1>";
                 }
@@ -38,10 +36,8 @@ while ($data = $req->fetch()) {
                     echo "<h1 class=\"text-center\">" . $data['name'] . "</h1>";
                 }
                 echo "</div>";
-                $page = new NewPage;
-                $page->integrate($data['id']);
+                $page = new NewPage($data['id']);
                 $layoutFooter = new LayoutFooter;
-                $layoutFooter->integrate();
                 echo "</div></body></html>";
                 break;
             case '/': // HOME PAGE

@@ -3,7 +3,7 @@
 class LayoutAside extends Layout
 {
     
-    public function integrate($page): void
+    function __construct($page)
     {
         global $bdd;
         parent::getDatabase();
@@ -11,14 +11,10 @@ class LayoutAside extends Layout
         echo "<div id=\"layoutAside\" class=\"col-lg-4 col-md-4 col-sm-12 container";
         while ($data = $req->fetch()) { if($data['grid' == 1]) { echo " grid"; }}
         echo "\">";
-        $text = new Text;
-        $text->integrate(2, $page);
-        $code = new Code;
-        $code->integrate(2, $page);
-        $img = new Image;
-        $img->integrate(2, $page);
-        $vid = new Video;
-        $vid->integrate(2, $page);
+        $text = new Text(2, $page);
+        $code = new Code(2, $page);
+        $img = new Image(2, $page);
+        $vid = new Video(2, $page);
         echo "</div>";
     }
     

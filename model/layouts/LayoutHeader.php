@@ -3,12 +3,10 @@
 class LayoutHeader
 {
     
-    public function integrate(): void
+    function __construct()
     {
         $navbar = new Navbar;
-        $navbar->integrate();
         $title = new Title;
-        $title->integrate();
     }
     
 }

@@ -3,7 +3,7 @@
 class LayoutBottom extends Layout
 {
     
-    public function integrate($page): void
+    function __construct($page)
     {
         global $bdd;
         parent::getDatabase();
@@ -11,14 +11,10 @@ class LayoutBottom extends Layout
         echo "<div id=\"layoutBottom\" class=\"col-12 container";
         while ($data = $req->fetch()) { if($data['grid' == 1]) { echo " grid"; }}
         echo "\">";
-        $img = new Image;
-        $img->integrate(3, $page);
-        $text = new Text;
-        $text->integrate(3, $page);
-        $code = new Code;
-        $code->integrate(3, $page);
-        $vid = new Video;
-        $vid->integrate(3, $page);
+        $img = new Image(3, $page);
+        $text = new Text(3, $page);
+        $code = new Code(3, $page);
+        $vid = new Video(3, $page);
         echo "</div>";
     }
     

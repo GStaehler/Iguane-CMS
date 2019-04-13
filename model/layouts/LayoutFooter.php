@@ -3,10 +3,9 @@
 class LayoutFooter
 {
     
-    public function integrate(): void
+    function __construct()
     {
         $footer = new Footer;
-        $footer->integrate();
     }
     
 }

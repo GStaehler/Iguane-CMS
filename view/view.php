@@ -19,12 +19,11 @@ require('model/Page.php');
     <style><?php require_once("style/view.css"); ?></style>
 </head>
 
-<body <?php $background = new Background; $background->integrate(); ?> >
+<body <?php $background = new Background; ?> >
     <div style="font-family: 'Noto Sans', sans-serif;">
         <a class="fas fa-cogs fa-3x" href="/admin"></a>
         <?php
-        $page = new Page;
-        $page->integrate(0);
+        $page = new Page(0);
         ?>
     </div>
 </body>
