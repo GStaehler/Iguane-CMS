@@ -12,8 +12,9 @@ if (isset($_POST['deleteElement'])) { // DELETE ELEMENT
     header("Location: /");
 }
 
-if (isset($_POST['deleteAllElement'])) { // DELETE ALL ELEMENTS
+if (isset($_POST['deleteAllElement'])) { // DELETE ALL ELEMENTS AND PAGES
     $req = $bdd->query('DELETE FROM element');
+	$req = $bdd->query('DELETE FROM page WHERE id != 0');
     header("Location: /");
 }
 
@@ -165,7 +166,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
                 </select>
             </div>
             <input type="submit" class="btn btn-danger" name="deleteElement" value="Delete Element"><hr class="m-4">
-            <input type="submit" class="btn btn-danger" name="deleteAllElement" value="Delete all Elements">
+            <input type="submit" class="btn btn-danger" name="deleteAllElement" value="Delete all Elements and Pages">
             <hr id="pagesTitle" class="m-4"><br>
             <h2>Pages :</h2><br>
             
