@@ -15,8 +15,9 @@
 
 <body style="font-family: 'Noto Sans', sans-serif;" class="container d-flex justify-content-center">
 <div class="jumbotron">
-<a class="fas fa-eye fa-3x" href="/"></a>
+<!-- <a class="fas fa-eye fa-3x" href="/"></a> -->
 <form action="" method="post">
+	<a class="fas fa-long-arrow-alt-left fa-2x" style="position: relative; bottom: 20px;" href="/"></a>
 	<small class="form-text text-muted" style="color: white !important;">Gauthier Staehler</small>
 	<h1><span style="font-family: 'Indie Flower';">Iguane CMS</span></h1>
     <br>

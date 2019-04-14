@@ -24,7 +24,7 @@ require('model/Page.php');
 
 <body <?php $background = new Background; ?> >
     <div style="font-family: 'Noto Sans', sans-serif;">
-        <a class="fas fa-cogs fa-3x" href="/admin"></a>
+        <!-- <a class="fas fa-cogs fa-3x" href="/admin"></a> -->
         <?php
         $page = new Page(0);
         ?>

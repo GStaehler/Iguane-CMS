@@ -29,7 +29,7 @@ while ($data = $req->fetch()) {
                 $background = new Background;
                 echo ">";
                 echo "<div style=\"font-family: 'Noto Sans', sans-serif;\">";
-                echo  "<a class=\"fas fa-cogs fa-3x\" href=\"/admin\"></a>";
+                // echo  "<a class=\"fas fa-cogs fa-3x\" href=\"/admin\"></a>";
                 echo "<div id=\"layoutHeader\">";
                 $navbar = new Navbar;
                 if ($data['theme'] == 2) { // CHANGE THEME
