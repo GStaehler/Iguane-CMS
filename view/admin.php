@@ -59,7 +59,7 @@ if (isset($_POST['changeUsernamePassword'])) { // CHANGE USERNAME AND PASSWORD
     header("Location: /");
 }
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
+require("model/database.php");
 
 ?>
 
