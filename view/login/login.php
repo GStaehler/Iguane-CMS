@@ -47,7 +47,7 @@ while ($data = $req->fetch()) {
         }
 		
 		else {
-			echo "<div id=\"errMessage\" class=\"text-center mt-4\">Wrong username or password !</div>";
+			echo "<div id=\"errMessage\" class=\"text-center mt-5\">Incorrect username or password. Try again.</div>";
 		}
     }
 }
