@@ -15,11 +15,11 @@ while ($data = $req->fetch()) {
 			    echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">";
                 echo "<title>" . $data['name'] . "</title>";
                 echo "<link rel=\"icon\" href=\"https://image.flaticon.com/icons/png/512/83/83946.png\">";
-			    echo "<script src=\"https://code.jquery.com/jquery-3.4.0.min.js\"></script>";
+			    echo "<script src=\"vendor/jquery-3.4.0.js\"></script>";
                 echo "<style>";
                 require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css");
                 echo "</style>";
-			    echo "<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>";
+			    echo "<script src=\"vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js\"></script>";
                 echo "<style>";
                 require_once("style/view.css");
                 echo "</style>";
