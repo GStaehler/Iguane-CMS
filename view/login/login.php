@@ -75,7 +75,7 @@ while ($data = $req->fetch()) {
 		margin-top: 80px;
 		padding: 100px;
 		width: 60%;
-		box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.8);
+		box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.6);
 	}
 	
 	#errMessage {
