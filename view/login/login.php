@@ -46,7 +46,7 @@
 	}
 	
 	.jumbotron {
-		background-image: url("https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg");
+		background-image: url("../../images/login_background.jpg");
 		background-size: cover;
 		margin-top: 80px;
 		padding: 100px;
