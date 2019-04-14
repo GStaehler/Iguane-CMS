@@ -8,6 +8,7 @@ require('model/Page.php');
 
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Gauthier Staehler">
     <?php $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     $req = $bdd->query('SELECT element.content FROM element WHERE element.type = 2'); ?>

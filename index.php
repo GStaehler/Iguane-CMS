@@ -12,6 +12,7 @@ while ($data = $req->fetch()) {
             case '/'.str_replace(' ', '', $data['name']): // GENERATED PAGES
                 require('controller/controller.php');
                 require('model/NewPage.php');
+			    echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">";
                 echo "<title>" . $data['name'] . "</title>";
                 echo "<link rel=\"icon\" href=\"https://image.flaticon.com/icons/png/512/83/83946.png\">";
                 echo "<style>";

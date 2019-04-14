@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
@@ -35,6 +36,8 @@
 	
 	body {
 		color: white;
+		background: linear-gradient(141deg, lightblue 0%, white 51%, lightblue 75%);
+		background-attachment: fixed;
 	}
 	
 	input, button {
@@ -47,12 +50,18 @@
 		margin-top: 80px;
 		padding: 100px;
 		width: 60%;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.8);
 	}
 	
-	@media (max-width: 992px) {
+	@media (max-width: 768px) {
 		.jumbotron {
 			width: 100%;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.jumbotron {
+			padding: 40px;
 		}
 	}
 
