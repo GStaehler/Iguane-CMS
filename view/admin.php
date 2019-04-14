@@ -91,7 +91,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
             echo "<br>Welcome <code class=\"lead\">" . $data['name'] . "</code> !<br>";
         }
         echo "<form action=\"\" method=\"post\">";
-        echo "<input type=\"submit\" class=\"btn btn-sm btn-success mt-2\" name=\"disconnect\" value=\"Disconnect\">";
+        echo "<input type=\"submit\" class=\"btn btn-sm btn-outline-success mt-2\" name=\"disconnect\" value=\"Disconnect\">";
         echo "</form>"; } ?>
         <hr class="m-4"><br>
         <div class="d-flex justify-content-center">
