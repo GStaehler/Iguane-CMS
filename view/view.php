@@ -18,6 +18,7 @@ require('model/Page.php');
     <style><?php require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css"); ?></style>
 	<script src="../vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
     <style><?php require_once("style/view.css"); ?></style>
 </head>
@@ -27,6 +28,11 @@ require('model/Page.php');
         <!-- <a class="fas fa-cogs fa-3x" href="/admin"></a> -->
         <?php
         $page = new Page(0);
+		
+		$req = $bdd->query('SELECT COUNT(*) FROM element');
+		if ($req->fetchColumn() == 0) {
+			echo "<div class=\"container text-center\"><h1 style=\"font-family: 'Indie Flower';\">Iguane CMS</h1><br>Thank you for using Iguane CMS ! To start editing your website and create your first element, go to <a href=\"/admin\"><span class=\"lead\">/admin</span></a> ! </div>";
+		}
         ?>
     </div>
 </body>
