@@ -84,7 +84,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
     <a class="fas fa-eye fa-3x" href="/"></a>
     <div id="administration" class="container"><br><br>
         <small class="form-text text-muted">Gauthier Staehler</small>
-        <h1><span style="text-decoration: overline; font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span> - Administration</h1>
+        <h1><span style="font-family: 'Indie Flower';">Iguane CMS</span></h1>
         <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
         $req = $bdd->query('SELECT name FROM user');
         while ($data = $req->fetch()) { 

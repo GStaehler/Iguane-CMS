@@ -6,14 +6,17 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
-    <style><?php require_once("style/view.css"); ?></style>
+	<style><?php require_once("style/admin.css"); ?></style>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 </head>
 
-<body class="container">
+<body style="font-family: 'Noto Sans', sans-serif;" class="container d-flex justify-content-center">
+<div class="jumbotron">
 <a class="fas fa-eye fa-3x" href="/"></a>
 <form action="" method="post">
-    <h1>Login</h1>
-    <hr>
+	<small class="form-text text-muted" style="color: white !important;">Gauthier Staehler</small>
+	<h1><span style="font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span></h1>
     <br>
     <div class="form-group">
         <label for="formGroup">Username</label>
@@ -23,14 +26,31 @@
         <label for="formGroup2">Password</label>
         <input type="password" class="form-control" id="formGroup2" name="password" value="">
     </div>
-    <button type="submit" name="submitLogin" class="btn btn-info">Submit</button>
+    <button type="submit" name="submitLogin" class="btn btn-info">Login</button>
 </form>
+</div>
 </body>
 
 <style>
-    form {
-        margin-top: 60px;
-    }
+	
+	body {
+		color: white;
+	}
+	
+	.jumbotron {
+		background-image: url("https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg");
+		background-size: cover;
+		margin-top: 80px;
+		padding: 100px;
+		width: 60%;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+	@media (max-width: 992px) {
+		.jumbotron {
+			width: 100%;
+		}
+	}
 
 </style>
 
