@@ -30,6 +30,30 @@
     </div>
     <button type="submit" name="submitLogin" class="btn btn-info">Login</button>
 </form>
+	
+<?php
+
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
+$req = $bdd->query('SELECT name, password FROM user');
+while ($data = $req->fetch()) {
+    
+    if (isset($_POST['submitLogin'])) {
+
+        if ($_POST['username'] == $data['name'] && $_POST['password'] == $data['password']) {
+            session_start();
+            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['password'] = $_POST['password'];
+            header("Location: /admin");
+        }
+		
+		else {
+			echo "<div id=\"errMessage\" class=\"text-center mt-4\">Wrong username or password !</div>";
+		}
+    }
+}
+	
+?>
+	
 </div>
 </body>
 
@@ -41,7 +65,7 @@
 		background-attachment: fixed;
 	}
 	
-	input, button {
+	input, button, #errMessage {
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
 	
@@ -52,6 +76,13 @@
 		padding: 100px;
 		width: 60%;
 		box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.8);
+	}
+	
+	#errMessage {
+		color: red;
+		background-color: white;
+		border-radius: .25rem;
+		padding: 6px;
 	}
 	
 	@media (max-width: 768px) {
@@ -69,21 +100,3 @@
 </style>
 
 </html>
-
-<?php
-
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=iguane;charset=utf8', 'root', '');
-$req = $bdd->query('SELECT name, password FROM user');
-while ($data = $req->fetch()) {
-    
-    if (isset($_POST['submitLogin'])) {
-
-        if ($_POST['username'] == $data['name'] && $_POST['password'] == $data['password']) {
-            session_start();
-            $_SESSION['username'] = $_POST['username'];
-            $_SESSION['password'] = $_POST['password'];
-            header("Location: /admin");
-        }
-    }
-}
-?>
