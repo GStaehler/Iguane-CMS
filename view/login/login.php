@@ -18,7 +18,7 @@
 <a class="fas fa-eye fa-3x" href="/"></a>
 <form action="" method="post">
 	<small class="form-text text-muted" style="color: white !important;">Gauthier Staehler</small>
-	<h1><span style="font-family: 'Indie Flower';">Iguane</span><span style="font-family: 'Indie Flower';"> CMS</span></h1>
+	<h1><span style="font-family: 'Indie Flower';">Iguane CMS</span></h1>
     <br>
     <div class="form-group">
         <label for="formGroup">Username</label>
