@@ -31,7 +31,7 @@ require('model/Page.php');
 		
 		$req = $bdd->query('SELECT COUNT(*) FROM element');
 		if ($req->fetchColumn() == 0) {
-			echo "<div class=\"container text-center\"><h1 style=\"font-family: 'Indie Flower';\">Iguane CMS</h1><br>Thank you for using Iguane CMS ! To start editing your website and create your first element, go to <a href=\"/admin\"><span class=\"lead\">/admin</span></a> ! </div>";
+			echo "<div class=\"container text-center\"><h1 style=\"font-family: 'Indie Flower';\">Iguane CMS</h1><br>Thank you for using Iguane CMS ! To start editing your website and create your first element, go to <a href=\"/admin\"><span class=\"lead\">/admin</span></a> !</div>";
 		}
         ?>
     </div>
