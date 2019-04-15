@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 12 avr. 2019 à 13:10
+-- Généré le :  lun. 15 avr. 2019 à 15:43
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -147,8 +147,8 @@ INSERT INTO `type` (`id`, `name`) VALUES
 
 CREATE TABLE `user` (
   `id` tinyint(4) NOT NULL,
-  `name` tinytext NOT NULL,
-  `password` tinytext NOT NULL
+  `name` text NOT NULL,
+  `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -156,7 +156,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `password`) VALUES
-(1, 'admin', 'admin');
+(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997');
 
 --
 -- Index pour les tables déchargées
@@ -216,19 +216,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
 --
 ALTER TABLE `layout`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `site`
