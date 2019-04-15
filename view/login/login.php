@@ -37,7 +37,7 @@
 	
 <?php
 
-require("model/database.php"); // USERNAME AND PASSWORD VERIFICATION
+require("model/database.php"); // USERNAME AND PASSWORD VERIFICATION -- PROTECTED AGAINST SQL INJECTION
 $req = $bdd->query('SELECT name, password FROM user');
 while ($data = $req->fetch()) {
     if (isset($_POST['submitLogin'])) {
