@@ -30,7 +30,7 @@ require('model/Page.php');
         $page = new Page(0);
 		
 		$req = $bdd->query('SELECT COUNT(*) FROM element');
-		if ($req->fetchColumn() == 0) {
+		if ($req->fetchColumn() == 0) { // IF ELEMENT TABLE IS EMPTY -- WELCOME TEXT
 			echo "<div class=\"container text-center\"><h1 style=\"font-family: 'Indie Flower';\">Iguane CMS</h1><br>Thank you for using Iguane CMS ! To start editing your website and create your first element, go to <a href=\"/admin\"><span class=\"lead ml-2 mr-2\">/admin</span></a> ! <br><br>Default username and password : admin<hr class=\"m-4\"><a href=\"https://github.com/GStaehler/Iguane-CMS\" target=\"_blank\" class=\"fab fa-github fa-2x\"></a></div>";
 		}
         ?>
