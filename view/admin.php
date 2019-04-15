@@ -253,30 +253,26 @@ require("model/database.php");
         });
     });
     
-    $(document).ready(function() { // DISABLED LAYOUT AND PAGE SELECTION FOR UNIQUE ELEMENTS
-        $("#TypeSelection").change(function() {
-            if ($("#navbar").is(":selected")) {
-                $('#LayoutSelection').attr('disabled', 'disabled');
-                $('#PageSelection').attr('disabled', 'disabled');
-            }
-            else if ($("#title").is(":selected")) {
-                $('#LayoutSelection').attr('disabled', 'disabled');
-                $('#PageSelection').attr('disabled', 'disabled');
-            }
-            else if ($("#footer").is(":selected")) {
-                $('#LayoutSelection').attr('disabled', 'disabled');
-                $('#PageSelection').attr('disabled', 'disabled');
-            }
-            else if ($("#bckimg").is(":selected")) {
-                $('#LayoutSelection').attr('disabled', 'disabled');
-                $('#PageSelection').attr('disabled', 'disabled');
-            }
-            else {
-                $('#LayoutSelection').removeAttr('disabled');
-                $('#PageSelection').removeAttr('disabled');
-            }
-        });
+    $(document).ready(function () { // DISABLED LAYOUT AND PAGE SELECTION FOR UNIQUE ELEMENTS
+    $("#TypeSelection").change(function () {
+        if ($("#navbar").is(":selected")) {
+            $('#LayoutSelection').attr('disabled', 'disabled');
+            $('#PageSelection').attr('disabled', 'disabled');
+        } else if ($("#title").is(":selected")) {
+            $('#LayoutSelection').attr('disabled', 'disabled');
+            $('#PageSelection').attr('disabled', 'disabled');
+        } else if ($("#footer").is(":selected")) {
+            $('#LayoutSelection').attr('disabled', 'disabled');
+            $('#PageSelection').attr('disabled', 'disabled');
+        } else if ($("#bckimg").is(":selected")) {
+            $('#LayoutSelection').attr('disabled', 'disabled');
+            $('#PageSelection').attr('disabled', 'disabled');
+        } else {
+            $('#LayoutSelection').removeAttr('disabled');
+            $('#PageSelection').removeAttr('disabled');
+        }
     });
+});
     
 </script>
 
