@@ -228,6 +228,7 @@ require("model/database.php");
                 <br>
                 <label for="Password">Password</label>
                 <input type="text" class="form-control" id="Password" rows="3" name="password" value="">
+                <small class="form-text text-muted">Please, create a strong password.</small><br>
             </div>
             <input type="submit" class="btn btn-danger" name="changeUsernamePassword" value="Change Username and Password">
             <br style="margin-bottom: 200px;">
