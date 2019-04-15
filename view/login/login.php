@@ -42,7 +42,7 @@ $req = $bdd->query('SELECT name, password FROM user');
 while ($data = $req->fetch()) {
     if (isset($_POST['submitLogin'])) {
         usleep(400000); // BRUTE FORCE PROTECTION
-        if (htmlspecialchars($_POST['username']) == $data['name'] && htmlspecialchars(sha1($_POST['password'])) == $data['password']) { // CROSS-SITE SCRIPTING (XSS) PROTECTION & HASH
+        if (htmlspecialchars($_POST['username']) == $data['name'] && htmlspecialchars(sha1(strlen($_POST['password']) . $_POST['password'] . strlen($_POST['password'])*8703)) == $data['password']) { // CROSS-SITE SCRIPTING (XSS) PROTECTION & HASH
             session_start();
             $_SESSION['username'] = htmlspecialchars($_POST['username']);
             $_SESSION['password'] = htmlspecialchars($_POST['password']);

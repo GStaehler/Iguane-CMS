@@ -55,7 +55,7 @@ if (isset($_POST['disconnect'])) { // DISCONNECT FROM SESSION
 
 if (isset($_POST['changeUsernamePassword'])) { // CHANGE USERNAME AND PASSWORD
     $req = $bdd->query('UPDATE user SET name = "' . $_POST["username"] . '" WHERE user.id = 1');
-    $req = $bdd->query('UPDATE user SET password = "' . sha1($_POST["password"]) . '" WHERE user.id = 1');
+    $req = $bdd->query('UPDATE user SET password = "' . sha1(strlen($_POST['password']) . $_POST["password"] . strlen($_POST['password'])*8703) . '" WHERE user.id = 1');
     header("Location: /");
 }
 
