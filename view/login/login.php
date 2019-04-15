@@ -41,6 +41,7 @@ require("model/database.php"); // USERNAME AND PASSWORD VERIFICATION -- PROTECTE
 $req = $bdd->query('SELECT name, password FROM user');
 while ($data = $req->fetch()) {
     if (isset($_POST['submitLogin'])) {
+        usleep(400000); // BRUTE FORCE PROTECTION
         if ($_POST['username'] == $data['name'] && $_POST['password'] == $data['password']) {
             session_start();
             $_SESSION['username'] = $_POST['username'];
