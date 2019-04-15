@@ -4,11 +4,6 @@ abstract class Element
 {
 
     private $bdd;
-
-    public function isMultiple()
-    {
-        return $this->isMultiple;
-    }
     
     public function getDatabase(): void
     {
