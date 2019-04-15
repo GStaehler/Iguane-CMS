@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome-free-5.7.2-web/css/all.min.css">
 	<style><?php require_once("style/admin.css"); ?></style>
+    <style><?php require_once("style/login.css"); ?></style>
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 </head>
@@ -34,19 +35,16 @@
 	
 <?php
 
-require("model/database.php");
+require("model/database.php"); // USERNAME AND PASSWORD VERIFICATION
 $req = $bdd->query('SELECT name, password FROM user');
 while ($data = $req->fetch()) {
-    
     if (isset($_POST['submitLogin'])) {
-
         if ($_POST['username'] == $data['name'] && $_POST['password'] == $data['password']) {
             session_start();
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['password'] = $_POST['password'];
             header("Location: /admin");
         }
-		
 		else {
 			echo "<div id=\"errMessage\" class=\"text-center mt-5\">Incorrect username or password. Try again.</div>";
 		}
@@ -57,47 +55,5 @@ while ($data = $req->fetch()) {
 	
 </div>
 </body>
-
-<style>
-	
-	body {
-		color: white;
-		background: linear-gradient(141deg, lightblue 0%, white 51%, lightblue 75%);
-		background-attachment: fixed;
-	}
-	
-	input, button, #errMessage {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	}
-	
-	.jumbotron {
-		background-image: url("../../images/login_background.jpg");
-		background-size: cover;
-		margin-top: 80px;
-		padding: 100px;
-		width: 60%;
-		box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.6);
-	}
-	
-	#errMessage {
-		color: red;
-		background-color: white;
-		border-radius: .25rem;
-		padding: 6px;
-	}
-	
-	@media (max-width: 768px) {
-		.jumbotron {
-			width: 100%;
-		}
-	}
-	
-	@media (max-width: 480px) {
-		.jumbotron {
-			padding: 40px;
-		}
-	}
-
-</style>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($_SESSION)) { session_start(); }
+if (!isset($_SESSION)) { session_start(); } // CONNECTION
 
 if (isset($_POST['addElement'])) { // ADD ELEMENT
     $req = $bdd->query('INSERT INTO element (type, content, layout, page) VALUES ("' . $_POST["type"] . '", "' . $_POST["content"] . '", "' . $_POST["layout"] . '", "' . $_POST["page"] . '")');
