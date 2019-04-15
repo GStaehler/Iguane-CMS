@@ -56,14 +56,14 @@ while ($data = $req->fetch()) {
 ?>
 	
 </div>
-    </body>
+</body>
     
-    <script>
-    
-    $(function() {
-        $('body').removeClass('fade-out');
-    });
-        
-    </script>
+<script>
+
+$(function() {
+    $('body').removeClass('fade-out');
+});
+
+</script>
 
 </html>
