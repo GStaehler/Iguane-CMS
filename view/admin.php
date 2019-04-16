@@ -34,6 +34,11 @@ if (isset($_POST['changeTheme'])) { // CHANGE THE THEME
     header("Location: /");
 }
 
+if (isset($_POST['changeNvf'])) { // CHANGE NAVBAR AND FOOTER COLOR
+    $req = $bdd->query('UPDATE site SET nvf = ' . $_POST["nvf"] . ' WHERE site.id = 1');
+    header("Location: /");
+}
+
 if (isset($_POST['showGrid'])) { // SHOW THE GRID
     $req2 = $bdd->query('SELECT grid FROM site');
     while ($data = $req2->fetch()) {
@@ -214,15 +219,20 @@ require("model/database.php");
             
             <!-- NAVBAR AND FOOTER COLOR -->
             
-            <!-- <div class="form-group"> TESTS
+            <div class="form-group">
                 <label for="nvfSelection">Select a color for navbar and footer</label>
                 <select class="form-control" id="nvfSelection" name="nvf">
                     <option value="1">Black</option>
-                    <option value="2">White</option>
+                    <option value="2">Red</option>
+                    <option value="3">Blue</option>
+                    <option value="4">Grey</option>
+                    <option value="5">Yellow</option>
+                    <option value="6">Green</option>
+                    <option value="7">Info</option>
                 </select>
             </div>
             <input type="submit" class="btn btn-info" name="changeNvf" value="Change Navbar and Footer color">
-            <hr id="gridTitle" class="m-4"><br> -->
+            <hr id="gridTitle" class="m-4"><br>
             
             <!-- SHOW THE GRID -->
             
