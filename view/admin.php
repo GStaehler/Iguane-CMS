@@ -210,7 +210,19 @@ require("model/database.php");
                 </select>
             </div>
             <input type="submit" class="btn btn-info" name="changeTheme" value="Change Theme">
-            <hr id="gridTitle" class="m-4"><br>
+            <hr class="m-4">
+            
+            <!-- NAVBAR AND FOOTER COLOR -->
+            
+            <!-- <div class="form-group"> TESTS
+                <label for="nvfSelection">Select a color for navbar and footer</label>
+                <select class="form-control" id="nvfSelection" name="nvf">
+                    <option value="1">Black</option>
+                    <option value="2">White</option>
+                </select>
+            </div>
+            <input type="submit" class="btn btn-info" name="changeNvf" value="Change Navbar and Footer color">
+            <hr id="gridTitle" class="m-4"><br> -->
             
             <!-- SHOW THE GRID -->
             
