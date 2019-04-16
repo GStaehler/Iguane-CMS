@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 15 avr. 2019 à 15:43
+-- Généré le :  mar. 16 avr. 2019 à 13:48
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -60,6 +60,30 @@ INSERT INTO `layout` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `nvf`
+--
+
+CREATE TABLE `nvf` (
+  `id` tinyint(4) NOT NULL,
+  `name` tinytext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `nvf`
+--
+
+INSERT INTO `nvf` (`id`, `name`) VALUES
+(1, 'nvf-black'),
+(2, 'bg-danger'),
+(3, 'bg-primary'),
+(4, 'bg-secondary'),
+(5, 'bg-warning'),
+(6, 'bg-success'),
+(7, 'bg-info');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `page`
 --
 
@@ -84,6 +108,7 @@ INSERT INTO `page` (`id`, `name`) VALUES
 CREATE TABLE `site` (
   `id` tinyint(4) NOT NULL,
   `theme` tinyint(4) NOT NULL,
+  `nvf` tinyint(4) NOT NULL,
   `grid` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -91,8 +116,8 @@ CREATE TABLE `site` (
 -- Déchargement des données de la table `site`
 --
 
-INSERT INTO `site` (`id`, `theme`, `grid`) VALUES
-(1, 1, 0);
+INSERT INTO `site` (`id`, `theme`, `nvf`, `grid`) VALUES
+(1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -156,7 +181,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `password`) VALUES
-(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997');
+(1, 'admin', '46b3be38ec4a549fd94963bd73df7a14fe7529b2');
 
 --
 -- Index pour les tables déchargées
@@ -178,6 +203,12 @@ ALTER TABLE `layout`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `nvf`
+--
+ALTER TABLE `nvf`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `page`
 --
 ALTER TABLE `page`
@@ -188,7 +219,8 @@ ALTER TABLE `page`
 --
 ALTER TABLE `site`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `theme` (`theme`);
+  ADD KEY `theme` (`theme`),
+  ADD KEY `nvf` (`nvf`);
 
 --
 -- Index pour la table `theme`
@@ -216,7 +248,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
@@ -225,10 +257,16 @@ ALTER TABLE `layout`
   MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT pour la table `nvf`
+--
+ALTER TABLE `nvf`
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `site`
