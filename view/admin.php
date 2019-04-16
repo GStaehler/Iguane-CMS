@@ -206,7 +206,10 @@ require("model/database.php");
             <div class="form-group">
                 <?php
                 $req = $bdd->query('SELECT site.theme, theme.name AS theme_name FROM site INNER JOIN theme ON theme.id = site.theme WHERE site.id = 1');
-                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 6px; bottom: 1.5px;\">Current Theme : </small><code class=\"lead\" style=\"position: relative; left: 6px;\">" . $data['theme_name'] . "</code><br><br>"; };
+                while ($data = $req->fetch()) { echo "<i class=\"fas fa-adjust\"></i><small style=\"position: relative; left: 6px; bottom: 1.5px;\">Current Theme : </small><code class=\"lead\" style=\"position: relative; left: 6px;\">" . $data['theme_name'] . "</code>"; };
+                
+                $req = $bdd->query('SELECT nvf.name FROM nvf INNER JOIN site ON nvf.id = site.nvf');
+                while ($data = $req->fetch()) { echo "<small style=\"position: relative; left: 12px; bottom: 1.5px;\">, Current Color : </small><code class=\"lead\" style=\"position: relative; left: 12px;\">" . $data['name'] . "</code><br><br>"; };
                 ?>
                 <label for="ThemeSelection">Select a theme</label>
                 <select class="form-control" id="ThemeSelection" name="theme">
@@ -222,13 +225,13 @@ require("model/database.php");
             <div class="form-group">
                 <label for="nvfSelection">Select a color for navbar and footer</label>
                 <select class="form-control" id="nvfSelection" name="nvf">
-                    <option value="1">Black</option>
-                    <option value="2">Red</option>
-                    <option value="3">Blue</option>
-                    <option value="4">Grey</option>
-                    <option value="5">Yellow</option>
-                    <option value="6">Green</option>
-                    <option value="7">Info</option>
+                    <option value="1">nvf-black</option>
+                    <option value="2">bg-danger</option>
+                    <option value="3">bg-primary</option>
+                    <option value="4">bg-secondary</option>
+                    <option value="5">bg-warning</option>
+                    <option value="6">bg-success</option>
+                    <option value="7">bg-info</option>
                 </select>
             </div>
             <input type="submit" class="btn btn-info" name="changeNvf" value="Change Navbar and Footer color">
