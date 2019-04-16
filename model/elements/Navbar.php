@@ -2,6 +2,8 @@
 
 class Navbar extends Element
 {
+    
+    private $nvf = "nvf-black";
 
     function __construct()
     {
@@ -9,7 +11,7 @@ class Navbar extends Element
         parent::getDatabase();
         $req = $bdd->query('SELECT element.content FROM element INNER JOIN type ON element.type = type.id WHERE element.type = 2');
         while ($data = $req->fetch()) {
-            echo "<header><nav class=\"navbar navbar-expand-sm navbar-dark nvf-black\">
+            echo "<header><nav class=\"navbar navbar-expand-sm navbar-dark ". $this->nvf ."\">
                 <a class=\"navbar-brand\" style=\"position: relative; bottom: 1px;\" href=\"/\">" . $data['content'] . "</a>
 				<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 				<span class=\"navbar-toggler-icon\"></span></button>
