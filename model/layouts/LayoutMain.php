@@ -15,6 +15,7 @@ class LayoutMain extends Layout
         $text = new Text(1, $page);
         $code = new Code(1, $page);
         $vid = new Video(1, $page);
+        $fb = new Facebook(1, $page);
         echo "</div>";
     }
     

@@ -15,6 +15,7 @@ class LayoutBottom extends Layout
         $text = new Text(3, $page);
         $code = new Code(3, $page);
         $vid = new Video(3, $page);
+        $fb = new Facebook(3, $page);
         echo "</div>";
     }
     

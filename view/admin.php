@@ -124,6 +124,7 @@ require("model/database.php");
                     <option value="7">Image</option>
                     <option value="8">Youtube Video</option>
                     <option value="9">HTML Code</option>
+                    <option value="10">Facebook Link</option>
                 </select>
                 <small class="form-text text-muted">Navbar, Title, Footer and Background Image are unique and can not be created more than once. When creating a page, the Title element of the new page is generated from its name. Navbar, Footer and Background Image are the same on every page.</small>
             </div>

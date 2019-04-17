@@ -116,3 +116,8 @@ p {
 .nvf-black {
     background-color: #212529;
 }
+
+.fa-facebook {
+    color: #4167B2;
+    position: inherit;
+}

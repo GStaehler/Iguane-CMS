@@ -15,6 +15,7 @@ class LayoutAside extends Layout
         $code = new Code(2, $page);
         $img = new Image(2, $page);
         $vid = new Video(2, $page);
+        $fb = new Facebook(2, $page);
         echo "</div>";
     }
     
