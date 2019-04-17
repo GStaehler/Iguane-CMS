@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mar. 16 avr. 2019 à 13:48
+-- Généré le :  mer. 17 avr. 2019 à 10:50
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -35,6 +35,16 @@ CREATE TABLE `element` (
   `content` text NOT NULL,
   `page` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `element`
+--
+
+INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
+(1, 2, 0, 'Navbar', 0),
+(2, 4, 0, 'Me', 0),
+(3, 10, 1, 'https://www.facebook.com/', 0),
+(4, 5, 1, 'sss', 0);
 
 -- --------------------------------------------------------
 
@@ -97,7 +107,8 @@ CREATE TABLE `page` (
 --
 
 INSERT INTO `page` (`id`, `name`) VALUES
-(0, '0');
+(0, '0'),
+(1, 'Second');
 
 -- --------------------------------------------------------
 
@@ -162,7 +173,8 @@ INSERT INTO `type` (`id`, `name`) VALUES
 (6, 'background'),
 (7, 'image'),
 (8, 'video'),
-(9, 'code');
+(9, 'code'),
+(10, 'facebook');
 
 -- --------------------------------------------------------
 
@@ -248,7 +260,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
@@ -284,7 +296,7 @@ ALTER TABLE `theme`
 -- AUTO_INCREMENT pour la table `type`
 --
 ALTER TABLE `type`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `user`
