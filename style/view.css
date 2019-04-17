@@ -116,12 +116,3 @@ p {
 .nvf-black {
     background-color: #212529;
 }
-
-.fa-facebook {
-    position: relative;
-    bottom: 60px;
-    color: white;
-    margin-left: 24px;
-    margin-right: 24px;
-    display: none;
-}
