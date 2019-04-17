@@ -9,7 +9,7 @@ $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
 while ($data = $req->fetch()) {
     switch ($request_uri[0]) {
-            case '/'.str_replace(' ', '', $data['name']): // GENERATED PAGES
+            case '/'.str_replace('é', 'e', str_replace('è', 'e', str_replace(' ', '', $data['name']))): // GENERATED PAGES
                 require('controller/controller.php');
                 require('model/NewPage.php');
 			    echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">";
