@@ -70,7 +70,8 @@ p {
     margin-bottom: 32px;
 }
 
-.imageElement, .youtubeVideo {
+.imageElement,
+.youtubeVideo {
     width: 60%;
     height: 292px;
     display: block;
@@ -120,4 +121,35 @@ p {
 .fa-facebook {
     color: #4167B2;
     position: inherit;
+}
+
+.adminEffect {
+    position: relative;
+    animation: bouncing 3s;
+}
+
+@keyframes bouncing {
+    0% {
+        top: 0px;
+    }
+
+    20% {
+        top: -6px;
+    }
+
+    40% {
+        top: 6px;
+    }
+
+    60% {
+        top: -6px;
+    }
+
+    80% {
+        top: 6px;
+    }
+
+    100% {
+        top: 0px;
+    }
 }
