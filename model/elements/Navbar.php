@@ -32,7 +32,7 @@ class Navbar extends Element
             while($data2 = $req2->fetch()) {
                 if ($data2['name'] !== "0") {
                     echo "<li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"/" . str_replace('é', 'e', str_replace('è', 'e', str_replace(' ', '', $data2['name']))) . "\">" . $data2['name'] . "</a>
+                            <a class=\"nav-link\" href=\"/" . str_replace('ê', 'e', str_replace('é', 'e', str_replace('è', 'e', str_replace(' ', '', $data2['name'])))) . "\">" . $data2['name'] . "</a>
                           </li>";
                 }
             }
