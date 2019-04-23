@@ -20,7 +20,7 @@ if (isset($_POST['deleteAllElement'])) { // DELETE ALL ELEMENTS AND PAGES
 
 if (isset($_POST['createPage'])) { // CREATE A PAGE
     $req = $bdd->query('INSERT INTO page (name) VALUES ("' . $_POST["pageName"] . '")');
-    header("Location: /".str_replace(' ', '', $_POST["pageName"]));
+    header("Location: /".str_replace('ê', 'e', str_replace('é', 'e', str_replace('è', 'e', str_replace(' ', '', $_POST["pageName"])))));
 }
 
 if (isset($_POST['deletePage'])) { // DELETE A PAGE
