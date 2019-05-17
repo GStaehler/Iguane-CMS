@@ -2,6 +2,8 @@
 
 session_start();
 
+error_reporting(0);
+
 require("model/database.php");
 $req = $bdd->query('SELECT page.id, page.name, site.theme as theme FROM site, page');
 
@@ -54,8 +56,6 @@ while ($data = $req->fetch()) {
                     require_once 'view/login/login.php';
                 }
                 break;
-            case '/install': // INSTALL PAGE
-                require_once 'view/install.php';
             default:
                 // header('HTTP/1.0 404 Not Found');
                 // require 'view/404.php';
