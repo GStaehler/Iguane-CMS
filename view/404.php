@@ -1,10 +1,10 @@
-<!doctype HTML> <!-- DEPRECATED -->
+<!doctype HTML> <!-- WIP -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Gauthier Staehler">
-    <title>Gauthier Staehler - Fil Rouge 4.0.2</title>
+    <title>404</title>
     <link rel="stylesheet" href="../vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 </head>
 
