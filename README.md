@@ -5,14 +5,12 @@ Content Management System for publishing web content. Iguane is written in PHP, 
 
 ### Developed by Gauthier Staehler
 
-Iguane is a study project at UHA 4.0 Mulhouse developed over a six-week period.
+Iguane is a study project at UHA 4.0 Mulhouse mainly developed over a six-week period.
 
 ### Installation
 
 ```sh
 - Clone the repository into your local folder
-
-- Import the sql file into phpMyAdmin
 
 - php -S localhost:8000
 ```
@@ -25,6 +23,7 @@ Iguane is a study project at UHA 4.0 Mulhouse developed over a six-week period.
   - Two different Themes
   - The Grid, a border around Layouts for better visibility
   - Protected login page to access the administration page
+  - Installation page
 
 ### Login
 
