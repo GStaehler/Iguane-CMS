@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  mer. 17 avr. 2019 à 10:50
+-- Hôte : 127.0.0.1
+-- Généré le :  sam. 18 mai 2019 à 10:55
 -- Version du serveur :  10.1.38-MariaDB
--- Version de PHP :  7.3.2
+-- Version de PHP :  7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `iguane`
+-- Base de données :  `iguan`
 --
 
 -- --------------------------------------------------------
@@ -35,16 +35,6 @@ CREATE TABLE `element` (
   `content` text NOT NULL,
   `page` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `element`
---
-
-INSERT INTO `element` (`id`, `type`, `layout`, `content`, `page`) VALUES
-(1, 2, 0, 'Navbar', 0),
-(2, 4, 0, 'Me', 0),
-(3, 10, 1, 'https://www.facebook.com/', 0),
-(4, 5, 1, 'sss', 0);
 
 -- --------------------------------------------------------
 
@@ -107,8 +97,7 @@ CREATE TABLE `page` (
 --
 
 INSERT INTO `page` (`id`, `name`) VALUES
-(0, '0'),
-(1, 'Second');
+(0, '0');
 
 -- --------------------------------------------------------
 
@@ -260,7 +249,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `element`
 --
 ALTER TABLE `element`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `layout`
@@ -278,7 +267,7 @@ ALTER TABLE `nvf`
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` mediumint(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `site`
