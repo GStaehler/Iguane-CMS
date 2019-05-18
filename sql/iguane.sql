@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 18 mai 2019 à 10:55
+-- Généré le :  sam. 18 mai 2019 à 11:39
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `iguan`
+-- Base de données :  `iguane`
 --
 
 -- --------------------------------------------------------
