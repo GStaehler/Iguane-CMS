@@ -9,7 +9,7 @@ Iguane is a study project at UHA 4.0 Mulhouse mainly developed over a six-week p
 
 ### Installation
 
-```console
+```cmd
 - Clone the repository into your local folder
 
 - php -S localhost:8000
