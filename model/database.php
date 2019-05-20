@@ -18,8 +18,11 @@ catch (Exception $e) {
 	}
 	echo "<form action=\"\" method=\"post\">";
 	if(!isset($_POST['createDb'])) {
-		echo "<br><small>Create database with username=\"<b>root</b>\" and password=\"\"</small><br>";
-		echo "<small>It may take a few seconds !</small><br>";
+        echo "<br><label for=\"PageName\">Username</label>";
+        echo "<input type=\"text\" class=\"form-control\" id=\"dbUser\" name=\"dbUser\" value=\"root\"><br>";
+        echo "<label for=\"PageName\">Password</label>";
+        echo "<input type=\"text\" class=\"form-control\" id=\"dbPass\" name=\"dbPass\" value=\"\"><br>";
+		echo "<small>It may take a few seconds to install database !</small><br>";
 		echo "<br><input type=\"submit\" name=\"createDb\" class=\"btn btn-outline-success\" value=\"Install\">";
 	}
 	echo "</form>";
@@ -27,8 +30,8 @@ catch (Exception $e) {
 	if (isset($_POST['createDb'])) {
 
 		$servername = "127.0.0.1";
-		$username = "root";
-		$password = "";
+		$username = $_POST["dbUser"];
+		$password = $_POST["dbPass"];
 
 		$conn = new PDO("mysql:host=$servername", $username, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -56,10 +59,7 @@ catch (Exception $e) {
 			}
 			return !empty($error)?$error:true;
 		}
-		
-		restoreDatabaseTables("127.0.0.1", "root", "", "iguane", "sql/iguane.sql");
-		header("Refresh: 10; Location: /");
+		restoreDatabaseTables("127.0.0.1", $username, $password, "iguane", "sql/iguane.sql");
 	}
-	
 	echo "</div>";
 }

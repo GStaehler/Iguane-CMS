@@ -9,7 +9,7 @@ Iguane is a study project at UHA 4.0 Mulhouse mainly developed over a six-week p
 
 ### Installation
 
-```sh
+```console
 - Clone the repository into your local folder
 
 - php -S localhost:8000
@@ -24,7 +24,3 @@ Iguane is a study project at UHA 4.0 Mulhouse mainly developed over a six-week p
   - The Grid, a border around Layouts for better visibility
   - Protected login page to access the administration page
   - Installation page
-
-### Login
-
-Default username and password : admin
