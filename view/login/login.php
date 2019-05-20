@@ -18,22 +18,21 @@
 <body style="font-family: 'Noto Sans', sans-serif;" class="container d-flex justify-content-center">
 <script>document.body.className += ' fade-out';</script>
 <div class="jumbotron">
-<!-- <a class="fas fa-eye fa-3x" href="/"></a> -->
-<form action="" method="post">
-	<a class="fas fa-long-arrow-alt-left fa-2x" style="position: relative; bottom: 20px;" href="/"></a>
-	<small class="form-text text-muted" style="color: white !important;">Gauthier Staehler</small>
-	<h1><span style="font-family: 'Indie Flower';">Iguane CMS</span></h1>
-    <br>
-    <div class="form-group">
-        <label for="formGroup">Username</label>
-        <input type="text" class="form-control" id="formGroup" name="username" value="">
-    </div>
-    <div class="form-group">
-        <label for="formGroup2">Password</label>
-        <input type="password" class="form-control" id="formGroup2" name="password" value="">
-    </div>
-    <button type="submit" name="submitLogin" class="btn btn-info">Login</button>
-</form>
+    <form action="" method="post">
+        <a class="fas fa-long-arrow-alt-left fa-2x" style="position: relative; bottom: 20px;" href="/"></a>
+        <small class="form-text text-muted" style="color: white !important;">Gauthier Staehler</small>
+        <h1><span style="font-family: 'Indie Flower';">Iguane CMS</span></h1>
+        <br>
+        <div class="form-group">
+            <label for="formGroup">Username</label>
+            <input type="text" class="form-control" id="formGroup" name="username" value="">
+        </div>
+        <div class="form-group">
+            <label for="formGroup2">Password</label>
+            <input type="password" class="form-control" id="formGroup2" name="password" value="">
+        </div>
+        <button type="submit" name="submitLogin" class="btn btn-info">Login</button>
+    </form>
 	
 <?php
 

@@ -155,7 +155,7 @@ require("model/database.php");
             
             <div class="form-group">
                 <label for="ContentArea">Content</label>
-                <textarea class="form-control" id="ContentArea" rows="3" name="content" value=""></textarea>
+                <textarea class="form-control" id="ContentArea" rows="5" name="content" value=""></textarea>
             </div>
             <input type="submit" class="btn btn-success" name="addElement" value="Add Element">
             <hr class="m-4">
@@ -181,13 +181,11 @@ require("model/database.php");
             
             <div class="form-group">
                 <label for="PageName">Name of the page</label>
-                <input type="text" class="form-control" id="PageName" rows="3" name="pageName" value="">
+                <input type="text" class="form-control" id="PageName" name="pageName" value="">
             </div>
             <input type="submit" class="btn btn-success" name="createPage" value="Add Page">
             <hr class="m-4">
-            <?php
-            $req = $bdd->query('SELECT page.id, page.name FROM page ORDER BY page.id');
-            ?>
+            <?php $req = $bdd->query('SELECT page.id, page.name FROM page ORDER BY page.id'); ?>
             
             <!-- DELETE A PAGE -->
             
@@ -250,10 +248,10 @@ require("model/database.php");
             <h2>User details :</h2><br>
             <div class="form-group">
                 <label for="Username">Username</label>
-                <input type="text" class="form-control" id="Username" rows="3" name="username" value="">
+                <input type="text" class="form-control" id="Username" name="username" value="">
                 <br>
                 <label for="Password">Password</label>
-                <input type="text" class="form-control" id="Password" rows="3" name="password" value="">
+                <input type="text" class="form-control" id="Password" name="password" value="">
                 <small class="form-text text-muted">Please, create a strong password.</small><br>
             </div>
             <input type="submit" class="btn btn-danger" name="changeUsernamePassword" value="Change Username and Password">
