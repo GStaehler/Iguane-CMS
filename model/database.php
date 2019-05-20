@@ -26,7 +26,7 @@ catch (Exception $e) {
 
 	if (isset($_POST['createDb'])) {
 
-		$servername = "localhost";
+		$servername = "127.0.0.1";
 		$username = "root";
 		$password = "";
 
@@ -57,7 +57,7 @@ catch (Exception $e) {
 			return !empty($error)?$error:true;
 		}
 		
-		restoreDatabaseTables("localhost", "root", "", "iguane", "sql/iguane.sql");
+		restoreDatabaseTables("127.0.0.1", "root", "", "iguane", "sql/iguane.sql");
 		header("Refresh: 10; Location: /");
 	}
 	
