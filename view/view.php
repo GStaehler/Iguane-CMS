@@ -14,7 +14,7 @@ require('model/Page.php');
     $req = $bdd->query('SELECT element.content FROM element WHERE element.type = 2'); ?>
     <title><?php while ($data = $req->fetch()) { echo $data['content'] . " - "; } ?>Home</title>
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/83/83946.png">
-	<script src="../vendor/jquery-3.4.0.js"></script>
+	<script src="../vendor/jquery-3.4.1.min.js"></script>
     <style><?php require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css"); ?></style>
 	<script src="../vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">

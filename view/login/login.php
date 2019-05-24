@@ -12,7 +12,7 @@
     <style><?php require_once("style/login.css"); ?></style>
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <script src="../../vendor/jquery-3.4.0.js"></script>
+    <script src="../../vendor/jquery-3.4.1.min.js"></script>
 </head>
 
 <body style="font-family: 'Noto Sans', sans-serif;" class="container d-flex justify-content-center">

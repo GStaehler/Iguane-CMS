@@ -17,7 +17,7 @@ while ($data = $req->fetch()) {
 			    echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">";
                 echo "<title>" . $data['name'] . "</title>";
                 echo "<link rel=\"icon\" href=\"https://image.flaticon.com/icons/png/512/83/83946.png\">";
-			    echo "<script src=\"vendor/jquery-3.4.0.js\"></script>";
+			    echo "<script src=\"vendor/jquery-3.4.1.min.js\"></script>";
                 echo "<style>";
                 require_once("vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css");
                 echo "</style>";
